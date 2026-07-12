@@ -1,0 +1,24 @@
+[package]
+name = "aura-tetrax"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8"
+ed25519-dalek = { version = "2.1", features = ["rand_core"] }
+hex = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["raw_value"] }
+chrono = "0.4"
+
+[[bin]]
+name = "auditor_legal"
+path = "src/bin/auditor_legal.rs"
+
+[[bin]]
+name = "identidad"
+path = "src/bin/identidad.rs"
+
+[[bin]]
+name = "purga"
+path = "src/bin/purga.rs"

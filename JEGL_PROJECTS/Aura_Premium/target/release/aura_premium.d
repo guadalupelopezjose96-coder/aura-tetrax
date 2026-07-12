@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/JEGL_PROJECTS/Aura_Premium/target/release/aura_premium: /data/data/com.termux/files/home/JEGL_PROJECTS/Aura_Premium/src/audit.rs /data/data/com.termux/files/home/JEGL_PROJECTS/Aura_Premium/src/main.rs

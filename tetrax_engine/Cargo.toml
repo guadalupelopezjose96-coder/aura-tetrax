@@ -1,0 +1,10 @@
+[package]
+name = "tetrax_engine"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+# Librería para paralelismo masivo
+rayon = "1.8"
+# Librería para procesamiento de señales (opcional para audio futuro)
+cpal = "0.15" 

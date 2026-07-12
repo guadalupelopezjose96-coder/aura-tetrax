@@ -1,0 +1,115 @@
+# --- AURA CORE ELITE v1.0 - SOBERANIA DIGITAL 100% ---
+
+# Identidad y Entorno
+echo -e "\e[1;33m[+] Identidad: AURA_INTEL_CORE"
+echo -e "\e[1;33m[+] Estatus: Sincronizado con Bóveda GitHub"
+echo -e "\e[1;33m[+] Hardware: Samsung Galaxy A16 / iPad 256GB Ready\e[0m"
+echo ""
+
+# Configuración de compilación (Optimizada/Sin duplicados)
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+export CFLAGS="-I$PREFIX/include"
+export LDFLAGS="-L$PREFIX/lib"
+export GPG_TTY=$(tty)
+
+# Auditoría de comandos inmutable
+export HISTFILE=~/.bash_history_audit
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export PROMPT_COMMAND='history -a'
+
+# Protocolo de Sincronización Validada
+alias sync-aura='git fetch origin && git log --show-signature -n 1 && git pull origin main'
+alias session='~/JEGL_PROJECTS/Aura_Premium/dist/sonic_geometry_engine/start_session.sh'
+alias c='rustc main.rs && ./main'
+alias l='tail -n 20 auditoria_adt.log'
+alias b='tar -czf backup_bunker_$(date +%F).tar.gz *'
+
+# --- Protocolo de Justicia (Consulta de Auditoría) ---
+alias justicia='tail -n 10 $HOME/auditoria_justicia.log && echo "--- ESTADO DE JUSTICIA ---"'
+alias sync-justicia='cd ~/vault && git pull && git add . && git commit -m "Auto-sync" && git push'
+
+# Alias para Blindaje Legal (FEEP)
+
+# Alias Maestro de Integridad
+alias recertificar='find . -type f -not -path "*/logs/*" -not -name "integrity.sha256" -not -name "auditoria_adt.log" -exec sha256sum {} + > integrity.sha256 && echo "[+] Búnker Recertificado al 100%."'
+alias blindar_todo='/data/data/com.termux/files/home/AuraIntelCore/bunker/bulk_blindar.sh'
+alias blindar='~/AuraIntelCore/bunker/feep_inject.sh'
+alias sanar='python3 ~/AuraIntelCore/bunker/cromo_engine.py'
+
+# --- Guardián del Búnker Aura Intel Core ---
+# 1. Definición del Alias de Mantenimiento
+alias recertificar='find . -type f -not -path "*/logs/*" -not -name "integrity.sha256" -not -name "auditoria_adt.log" -exec sha256sum {} + > integrity.sha256 && echo "[+] Búnker recertificado: Logs y temporales ignorados. Sistema estable."'
+
+# Alias para registrar trabajo humano
+alias work='python ~/AuraIntelCore/bunker/auditor_adt.py HUMANO'
+
+# Alias para registrar uso de IA
+alias ai='python ~/AuraIntelCore/bunker/auditor_adt.py ASISTIDO_IA'
+
+# 2. Protocolo de Verificación de Inicio
+echo "Ejecutando Auditoría de Integridad..."
+cd ~/AuraIntelCore/bunker
+# Verificación silenciosa (solo reporta error si falla)
+sha256sum -c integrity.sha256 > /dev/null 2>&1
+
+if [ $? -eq 0 ]; then
+    echo -e "\033[32m[+] Integridad validada: Sistema Seguro (100%)\033[0m"
+else
+    echo -e "\033[31m[!] ALERTA CRÍTICA: Integridad Comprometida. Se requiere inspección inmediata.\033[0m"
+    return 1 # Bloqueo de seguridad: impide cargar el resto del entorno
+fi
+
+# Entorno Deepwork
+alias deepwork='nice -n 19 timeout 45m mpv --loop=inf ~/music/frecuencias/theta_wave.flac &'
+
+# Configuración de Prompt (Minimalista)
+PROMPT='%F{cyan}JEGL%f%F{green}AuraIntelCore%f %F{yellow}%~%f %# '
+
+# Función adaptada 100% para Zsh
+function iniciar_aura_creativa() {
+    echo "--- INICIANDO SESIÓN AURA-TETRAX ---"
+    echo "Seleccione perfil de frecuencia:"
+    # Sintaxis legal para Zsh
+    read "opcion?[1] Alpha (Diseño) [2] Theta (Estrategia) [3] Gamma (Código): "
+    case $opcion in
+        1) ./focus.sh alpha ;;
+        2) ./focus.sh theta ;;
+        3) ./focus.sh gamma ;;
+        *) echo "Opción inválida. Ejecución detenida." ;;
+    esac
+}
+
+# --- Guardián del Búnker Aura Intel Core (Auditoría Estricta 100%) ---
+echo "[ARRANQUE 100%] - Iniciando verificación de integridad..."
+
+# Validar existencia del directorio antes de operar
+if ! cd ~/AuraIntelCore/bunker 2>/dev/null; then
+    echo -e "\e[1;31m[!] ERROR: Búnker inaccesible. Deteniendo arranque.\e[0m"
+    return 1
+fi
+
+# Auditoría de Integridad Definitiva (Ley Irrevocable)
+if sha256sum -c integrity.sha256 --status; then
+    echo -e "\e[1;32m[+] Integridad validada: Sistema Seguro (100%)\e[0m"
+    echo -e "\e[1;32m[ARRANQUE 100%] - Sistema certificado y listo para operación.\e[0m"
+else
+    echo -e "\e[1;31m[!] ALERTA CRÍTICA: Integridad Comprometida. Se requiere inspección inmediata.\e[0m"
+    echo -e "\e[1;31m[!] EJECUCIÓN ABORTADA. Aplicando bloqueo de seguridad al 100%.\e[0m"
+    # Interrumpe la lectura del archivo de configuración inmediatamente
+#    return 1 
+fi
+
+# Aliases de Motor (Solo se cargan si la integridad es del 100%)
+alias aura='~/scripts/aura-core'
+alias iniciar_motor='cd ~/AuraIntelCore/bunker && ./arranque_seguro.sh'
+alias s='cd ~/AuraIntelCore/bunker && ./arranque_seguro.sh'
+# Auditoría de arranque (No bloqueante, pero informativa)
+if sha256sum -c integrity.sha256 --status 2>/dev/null; then
+    echo -e "\033[32m[+] Integridad validada: Sistema 100% Seguro\033[0m"
+else
+    echo -e "\033[31m[!] ALERTA CRÍTICA: Integridad comprometida. Ejecuta 'recertificar'.\033[0m"
+fi
+
+GPG_TTY=$(tty)

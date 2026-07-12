@@ -1,0 +1,47 @@
+# ############################################################# #
+# #            AURA CORE ELITE v1.0 - SOBERANÍA DIGITAL       # #
+# #           PROPIEDAD INTELECTUAL PRIVADA JEGL              # #
+# ############################################################# #
+
+# --- ENCABEZADO DE IDENTIDAD ---
+echo -e "\e[1;32m#############################################################"
+echo -e "#            AURA CORE ELITE v1.0 - Soberanía Digital 100%  #"
+echo -e "#############################################################\e[0m"
+echo ""
+echo -e "\e[1;33m[+] Identidad:\e[0m AURA_INTEL_CORE"
+echo -e "\e[1;33m[+] Estatus:\e[0m Sincronizado con Bóveda GitHub"
+echo -e "\e[1;33m[+] Hardware:\e[0m Samsung Galaxy A16 / iPad 256GB Ready"
+echo ""
+
+# --- ALIAS DE SOBERANÍA JEGL ---
+# Comandos de Gestión y Patentes
+alias v_patente='python3 ~/Fourphonix-Core-JEGL-/utils/v_patent_manager.py'
+alias v_audita='python3 ~/Fourphonix-Core-JEGL-/utils/v_finance_audit.py'
+alias v_radar='python3 ~/Fourphonix-Core-JEGL-/utils/v_network_radar.py'
+
+# Comandos de Limpieza y Construcción
+alias v_limpia='rm -rf ~/.kivy/cache && echo "Caché inexistenciada al 100%"'
+alias v_build='bash ~/Fourphonix-Core-JEGL-/build_aura.sh'
+alias v_limpieza_raiz='bash ~/Fourphonix-Core-JEGL-/utils/v_limpieza.sh'
+
+# Comandos de Sincronización y Transbordo
+alias v_sincroniza='bash ~/Fourphonix-Core-JEGL-/utils/v_sincroniza_JEGL.sh'
+alias v_descarga_elite='bash ~/Fourphonix-Core-JEGL-/utils/v_transbordo_ipad.sh'
+alias v_update_all='~/Fourphonix-Core-JEGL-/utils/v_update_all.sh'
+
+# --- CONFIGURACIÓN DE PROMPT ---
+PROMPT='%F{cyan}JEGL%f@%F{green}AuraIntelCore%f %F{yellow}%~%f %% '
+
+# --- PROTOCOLO DE ANTICIPACIÓN TOTAL ---
+# Inexistenciar errores de carga previa
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+export STRIPE_SECRET_KEY="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"
+export CFLAGS="-I$PREFIX/include"
+export LDFLAGS="-L$PREFIX/lib"
+export CFLAGS="-I$PREFIX/include"
+export LDFLAGS="-L$PREFIX/lib"
+alias jegl-push='git push origin main'
+alias v-check='v-check'
+
+# [100% v] Configuración Finalizada.

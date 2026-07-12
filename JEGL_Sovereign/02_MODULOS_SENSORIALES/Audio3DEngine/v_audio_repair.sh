@@ -1,0 +1,10 @@
+# PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+# PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+# MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+# ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+# 
+
+#!/bin/bash
+# Generación de frecuencia 528Hz JEGL
+# El comando play -n utiliza síntesis para generar el tono
+play -n synth 1.0 sine 528 vol 0.1

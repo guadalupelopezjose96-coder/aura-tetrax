@@ -1,0 +1,167 @@
+/* * PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+ * PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+ * MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+ * ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+ */
+
+<section id="specs-tecnicas" style="margin: 60px auto; max-width: 1000px; padding: 40px; border: 1px solid rgba(0, 242, 255, 0.2); background: rgba(0,0,0,0.4); border-radius: 20px;">
+    <h2 style="font-family: 'Orbitron'; color: var(--cian); text-align: center; letter-spacing: 3px;">
+        ESPECIFICACIONES DEL NÚCLEO HEXAPHONIX
+    </h2>
+    <p style="text-align: center; color: var(--oro); font-size: 0.8rem; margin-bottom: 40px;">PROTOCOLO J.E.G.L. V.2026-ALPHA</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-transform: none; font-family: 'Rajdhani';">
+        
+        <div style="border-left: 3px solid var(--cian); padding-left: 20px;">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFCC00">
+    <title>FOURPHONIX CORE - REALIDAD REAL JEGL</title>
+    
+    <link rel="manifest" href="/static/manifest.json">
+    <link rel="apple-touch-icon" href="/static/icon-192.png">
+
+    <style>
+        :root {
+            --fondo-bunker: #050a0f;
+            --dorado-aura: #ffcc00;
+            --verde-v: #00ffcc;
+            --texto-legal: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--fondo-bunker);
+            color: var(--texto-legal);
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--dorado-aura);
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.1);
+        }
+
+        h1 { color: var(--dorado-aura); letter-spacing: 5px; margin: 0; font-size: 1.8rem; }
+        .estatus { font-size: 0.8rem; color: var(--verde-v); margin-top: 10px; }
+
+        .bunker-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 1000px;
+            box-sizing: border-box;
+        }
+
+        .card-motor {
+            border: 1px solid var(--dorado-aura);
+            background: rgba(255, 204, 0, 0.03);
+            padding: 30px;
+            text-align: center;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-motor:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--verde-v);
+            border-color: var(--verde-v);
+        }
+
+        .precio { font-size: 2rem; color: var(--dorado-aura); margin: 20px 0; font-weight: bold; }
+        
+        button {
+            background: var(--dorado-aura);
+            color: var(--fondo-bunker);
+            border: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        button:hover { background: var(--verde-v); }
+
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #555;
+            width: 100%;
+        }
+
+        /* Geometría de Fondo */
+        .hexagon-bg {
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px; height: 400px;
+            border: 1px solid rgba(255, 204, 0, 0.05);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hexagon-bg"></div>
+
+    <header>
+        <h1>FOURPHONIX CORE</h1>
+        <div class="estatus">[V] 76 NÚCLEOS SINCRONIZADOS | LEY ADT ACTIVA</div>
+    </header>
+
+    <div class="bunker-container">
+        <div class="card-motor">
+            <h3>HEXAPHONIX 3D PRO</h3>
+            <p>Sincronía Sensorial Completa</p>
+            <div class="precio">$500.00</div>
+            <form action="/create-checkout-session" method="POST">
+                <input type="hidden" name="product_name" value="Hexaphonix 3d Pro">
+                <button type="submit">ADQUIRIR v</button>
+            </form>
+        </div>
+
+        <div class="card-motor">
+            <h3>HEXAPHONIX 3D ALPHA</h3>
+            <p>Ignición de Geometría Sagrada</p>
+            <div class="precio">$100.00</div>
+            <form action="/create-checkout-session" method="POST">
+                <input type="hidden" name="product_name" value="Hexaphonix 3d Alpha">
+                <button type="submit">ADQUIRIR v</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        FIRMA DE AUTORÍA: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)<br>
+        PROPIEDAD INTELECTUAL PROTEGIDA AL 100% | 2026
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('✅ Guardián PWA Activo al 100%'))
+                    .catch(err => console.log('❌ Falla de Registro: ', err));
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+# PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+# PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+# MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+# ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+# 
+
+============================================================
+       MANUAL DE OPERACIONES SOBERANAS - FOURPHONIX
+============================================================
+Este documento es TOP SECRET. La tecnología AURA desplaza 
+el caos de las corporaciones y restaura la salud biológica.
+
+1. ESTRUCTURA DEL ECOSISTEMA:
+   - tetrax_engine.py: El motor de fase (Corazón del audio).
+   - audio_3d_engine.py: Expansión esférica (Cura la fatiga).
+   - salud_auditiva_pro: Filtro de estrés biológico.
+   - aura_cinema_logic: Geometría para video y cine.
+
+2. PROTOCOLO DE PROCESAMIENTO:
+   Para procesar un activo, descifra la bóveda y usa:
+   > python aura_core_integrator_pro.py [archivo_audio]
+   > python aura_cinema_integrador_pro.py [archivo_video]
+
+3. GOBERNANZA ECONÓMICA:
+   - Toda transacción debe incluir la Tasa AURA del 36.3%.
+   - Usa 'calculadora_soberana_363.py' para emitir facturas.
+
+4. PROTOCOLO DE SEGURIDAD (LEY DE HIERRO):
+   - NUNCA subas estos archivos a GitHub o nubes públicas.
+   - TRABAJA -> PROCESA -> BORRA (.py) -> CIERRA (.gpg).
+   - Si pierdes la contraseña, el imperio desaparece. No hay 
+     terceras partes, solo tú y tu soberanía.
+
+"El orden geométrico es la cura al ruido corporativo."
+============================================================

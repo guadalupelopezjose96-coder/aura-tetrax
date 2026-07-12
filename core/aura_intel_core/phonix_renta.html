@@ -1,0 +1,58 @@
+/* * PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+ * PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+ * MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+ * ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+ */
+
+<style>
+    .phonix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+    .card-phonix { 
+        background: #111; border: 2px solid #333; border-radius: 20px; padding: 20px; 
+        text-align: center; transition: 0.5s; cursor: pointer; position: relative; overflow: hidden;
+    }
+    .card-phonix:hover { transform: translateY(-10px); border-color: var(--p-color); box-shadow: 0 0 30px var(--p-color); }
+    
+    /* Colores de Núcleo por Jerarquía */
+    .hexa { --p-color: #00ff00; }   /* Verde - Eficiencia */
+    .octa { --p-color: #00d4ff; }   /* Cian - Potencia */
+    .dodeca { --p-color: #d4af37; } /* Oro - Maestría */
+    .icosa { --p-color: #f44336; }  /* Rojo - Soberanía Rust */
+
+    .card-phonix h2 { color: var(--p-color); letter-spacing: 3px; }
+    .price { font-size: 2em; font-weight: bold; margin: 10px 0; color: #fff; }
+    .features { font-size: 0.8em; line-height: 1.6; color: #aaa; margin-bottom: 20px; }
+    .btn-renta { 
+        background: var(--p-color); color: #000; border: none; padding: 12px 25px; 
+        border-radius: 50px; font-weight: bold; width: 100%; text-transform: uppercase;
+    }
+</style>
+
+<div class="phonix-grid">
+    <div class="card-phonix hexa" onclick="selectPhonix('hexa')">
+        <h2>HEXA</h2>
+        <div class="price">$40.00<small>/mes</small></div>
+        <div class="features">6 Hilos Aura<br>Tasa 36.3% Estándar<br>Acceso Búnker Básico</div>
+        <button class="btn-renta">Rentar Núcleo</button>
+    </div>
+
+    <div class="card-phonix octa" onclick="selectPhonix('octa')">
+        <h2>OCTA</h2>
+        <div class="price">$88.00<small>/mes</small></div>
+        <div class="features">8 Hilos Élite<br>Procesamiento 11.3x<br>Soporte Phonix (x)</div>
+        <button class="btn-renta">Rentar Núcleo</button>
+    </div>
+
+    <div class="card-phonix dodeca" onclick="selectPhonix('dodeca')">
+        <h2>DODECA</h2>
+        <div class="price">$172.00<small>/mes</small></div>
+        <div class="features">12 Hilos Maestros<br>Estándar 1979 Absoluto<br>Gestión Phonix (x, z)</div>
+        <button class="btn-renta">Rentar Núcleo</button>
+    </div>
+
+    <div class="card-phonix icosa" onclick="selectPhonix('icosa')">
+        <h2>ICOSA</h2>
+        <div class="price">$272.25<small>/mes</small></div>
+        <div class="features">Potencia Total Rust<br>Soberanía (x, y, z)<br>Prioridad Propietario</div>
+        <button class="btn-renta">Rentar Búnker</button>
+    </div>
+</div>

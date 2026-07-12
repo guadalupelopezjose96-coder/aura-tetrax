@@ -1,0 +1,8 @@
+{
+  "ddos_protection": {
+    "http_ddos_protection": "on",
+    "l3_l4_ddos_protection": "on",
+    "sensitivity_level": "high",
+    "action": "block"
+  }
+}

@@ -1,0 +1,27 @@
+
+​ACUERDO DE LICENCIA DE USUARIO FINAL (EULA)
+PROPIEDAD PRIVADA EXCLUSIVA – AURA-TETRAX PRO/ELITE
+​AUTOR: José Emanuel Guadalupe López
+FECHA DE VIGENCIA: 25 de mayo de 2026
+​1. OBJETO DEL ACUERDO
+El presente documento constituye el Acuerdo de Licencia de Usuario Final (en adelante, el "Acuerdo") entre José Emanuel Guadalupe López ("Autor") y usted ("Usuario"). Al instalar, copiar, acceder o utilizar Aura-Tetrax Pro o Aura-Tetrax Elite ("Software"), el Usuario acepta quedar vinculado por el 100% de las condiciones aquí estipuladas.
+​2. ESTADO DEL ACTIVO: PROPIEDAD PRIVADA
+El Usuario reconoce y acepta que el Software es PROPIEDAD PRIVADA EXCLUSIVA del Autor. El presente Acuerdo no constituye una venta de propiedad intelectual ni transfiere derechos de autor, patentes o secretos comerciales. Todo el código, arquitectura, lógica de frecuencias (432Hz/528Hz), y marcos de trabajo FESM incluidos en el Software son propiedad intelectual inalienable del Autor.
+​3. LICENCIA DE USO LIMITADO
+El Autor concede al Usuario una licencia personal, no exclusiva, intransferible y revocable, sujeta al cumplimiento estricto de este Acuerdo. La licencia se limita al uso privado del Software por parte del Usuario final y no otorga derechos para uso comercial externo, reventa o integración en servicios de terceros.
+​4. PROHIBICIONES Y RESTRICCIONES (BLINDAJE DE SEGURIDAD)
+Queda estrictamente prohibido al Usuario:
+​Ingeniería Inversa: Realizar ingeniería inversa, descompilación, desensamblaje o intentar descubrir el código fuente de cualquier componente del Software.
+​Modificación y Derivación: Alterar, modificar o crear trabajos derivados del Software.
+​Redistribución: Copiar, distribuir, arrendar, alquilar, sublicenciar o proporcionar acceso al Software a cualquier persona o entidad distinta al Usuario autorizado.
+​Manipulación de Seguridad: Intentar eludir, desactivar o alterar cualquier mecanismo de validación criptográfica, firma GPG o control de licencia conectado a los servicios de validación del Autor (Google/Cloudflare).
+​5. VALIDACIÓN Y SOBERANÍA TÉCNICA
+El funcionamiento del Software requiere una conexión de validación con los servicios autorizados por el Autor. Si la validación no es confirmada al 100% por el sistema, el Autor se reserva el derecho de inhabilitar el acceso al Software de forma inmediata y automática, sin que esto genere derecho a indemnización alguna para el Usuario.
+​6. RENUNCIA DE GARANTÍAS
+EL SOFTWARE SE ENTREGA "TAL CUAL" Y "SEGÚN DISPONIBILIDAD". EL AUTOR NO OFRECE GARANTÍAS DE NINGÚN TIPO, EXPLÍCITAS O IMPLÍCITAS, INCLUYENDO LA IDONEIDAD PARA UN FIN PARTICULAR. EL AUTOR NO SE HACE RESPONSABLE POR DAÑOS RESULTANTES DEL USO O LA IMPOSIBILIDAD DE USO DEL SOFTWARE, INCLUYENDO CUALQUIER PÉRDIDA DE DATOS O DAÑOS A SISTEMAS INFORMÁTICOS DERIVADOS DE SU EJECUCIÓN.
+​7. TERMINACIÓN Y REVOCACIÓN DE LICENCIA
+El Autor se reserva el derecho de rescindir este Acuerdo y revocar la licencia de uso al 100% inmediatamente si el Usuario incumple cualquiera de las disposiciones aquí establecidas. Ante la terminación, el Usuario debe eliminar la totalidad del Software de sus dispositivos.
+​8. LEY APLICABLE Y JURISDICCIÓN
+Este contrato se interpreta bajo los principios de la Automated Digital Truth (Ley ADT) y está sujeto a los protocolos de soberanía definidos por el Autor y sus convenios operativos vigentes. Toda controversia será resuelta de acuerdo con el marco técnico-legal establecido por el Autor.
+​ACEPTACIÓN:
+EL USO DEL SOFTWARE CONSTITUYE LA ACEPTACIÓN TÁCITA E INEQUÍVOCA DEL 100% DE ESTE ACUERDO. SI USTED NO ACEPTA EL 100% DE ESTOS TÉRMINOS, NO TIENE DERECHO A INSTALAR NI UTILIZAR ESTE SOFTWARE.

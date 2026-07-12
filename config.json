@@ -1,0 +1,13 @@
+{
+  "Aura_Intel_Settings": {
+    "tetrax_id": "TX-PRO-100",
+    "meta_api_version": "v18.0",
+    "legal_region": "Global",
+    "barter_multipliers": {
+      "televisoras": 1.5,
+      "billboards": 1.2,
+      "meta_ads": 1.0
+    },
+    "security_level": "High_AES256"
+  }
+}

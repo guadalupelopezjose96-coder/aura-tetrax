@@ -1,0 +1,38 @@
+#:import MDRaisedButton kivymd.uix.button.MDRaisedButton
+#:import MDLabel kivymd.uix.label.MDLabel
+
+<AuraInterface>:
+    orientation: 'vertical'
+    padding: dp(20)
+    spacing: dp(10)
+
+    MDLabel:
+        text: "SISTEMA AURA - CONTROL CORE"
+        halign: "center"
+        font_style: "H4"  # Antes era Headline
+        theme_text_color: "Primary"
+
+    MDLabel:
+        text: "Estado del Sistema: Activo"
+        halign: "center"
+        font_style: "body_large"
+        theme_text_color: "Secondary"
+
+    # Aquí estaba el error. Cambiamos 'Caption' por 'body_small'
+    MDLabel:
+        text: "Desplegando protocolos de salud visual y auditiva..."
+        halign: "center"
+        theme_text_color: "Custom"
+        text_color: 0.5, 0.5, 0.5, 1
+        font_style: "body_small" 
+
+    MDRaisedButton:
+        text: "REINICIAR ESCUDO"
+        pos_hint: {"center_x": .5}
+        on_release: app.reiniciar_escudo()
+
+    MDRaisedButton:
+        text: "SALIR"
+        pos_hint: {"center_x": .5}
+        md_bg_color: 1, 0, 0, 1
+        on_release: app.stop()

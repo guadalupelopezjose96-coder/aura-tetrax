@@ -1,0 +1,177 @@
+/* * PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+ * PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+ * MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+ * ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+ */
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFCC00">
+    <title>FOURPHONIX CORE - JEGL</title>
+    
+    <link rel="manifest" href="/static/manifest.json">
+    <link rel="apple-touch-icon" href="/static/icon-192.png">
+
+    <style>
+        :root {
+            --fondo: #050a0f;
+            --dorado: #ffcc00;
+            --verde-v: #00ffcc;
+            --texto: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--fondo);
+            color: var(--texto);
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Splash Screen de Justicia */
+        #splash-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background-color: var(--fondo);
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease-out;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--dorado);
+            width: 100%;
+            z-index: 10;
+        }
+
+        .bunker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 1100px;
+            box-sizing: border-box;
+        }
+
+        .card-motor {
+            border: 1px solid var(--dorado);
+            background: rgba(255, 204, 0, 0.02);
+            padding: 30px;
+            text-align: center;
+            border-radius: 5px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .card-motor:hover {
+            border-color: var(--verde-v);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .precio { font-size: 2.5rem; color: var(--dorado); margin: 20px 0; }
+
+        button {
+            background: var(--dorado);
+            color: var(--fondo);
+            border: none;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+
+        button:hover { background: var(--verde-v); }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.7rem;
+            color: #444;
+            text-align: center;
+        }
+
+        /* Geometría de Fondo */
+        .hexagon-bg {
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px; height: 500px;
+            border: 1px solid rgba(255, 204, 0, 0.03);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="splash-screen">
+        <svg width="120" height="120" viewBox="0 0 512 512">
+            <path d="M256 50 L434.35 153 L434.35 359 L256 462 L77.65 359 L77.65 153 Z" 
+                  fill="none" stroke="#FFCC00" stroke-width="15">
+                <animate attributeName="stroke-dasharray" from="0, 1500" to="1500, 0" dur="2s" />
+            </path>
+        </svg>
+        <h2 style="color: var(--dorado); letter-spacing: 3px;">FOURPHONIX</h2>
+    </div>
+
+    <div class="hexagon-bg"></div>
+
+    <header>
+        <h1>BÚNKER DE PLUSVALÍA</h1>
+        <p style="color: var(--verde-v); font-size: 0.8rem;">[V] SISTEMA SOBERANO JEGL ACTIVO</p>
+    </header>
+
+    <div class="bunker-grid">
+        <div class="card-motor">
+            <h3>HEXAPHONIX 3D PRO</h3>
+            <div class="precio">$500.00</div>
+            <form action="/create-checkout-session" method="POST">
+                <input type="hidden" name="product_name" value="Hexaphonix 3d Pro">
+                <button type="submit">ADQUIRIR v</button>
+            </form>
+        </div>
+
+        <div class="card-motor">
+            <h3>HEXAPHONIX 3D ALPHA</h3>
+            <div class="precio">$100.00</div>
+            <form action="/create-checkout-session" method="POST">
+                <input type="hidden" name="product_name" value="Hexaphonix 3d Alpha">
+                <button type="submit">ADQUIRIR v</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        AUTORÍA: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL) | REALIDAD REAL 2026
+    </footer>
+
+    <script>
+        // Inexistenciación de Splash
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const s = document.getElementById('splash-screen');
+                s.style.opacity = '0';
+                setTimeout(() => s.style.display = 'none', 800);
+            }, 1200);
+        });
+
+        // Registro de Guardián PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "protocolo": {
+    "nombre": "Ley de Verdad Digital Automatizada (ADT)",
+    "version": "1.0.0",
+    "autoridad_raiz": "JEGL",
+    "fecha_ultima_val": "2026-06-12"
+  },
+  "seguridad_inmutable": {
+    "hash_algoritmo": "SHA-256",
+    "firma_gpg_activa": true,
+    "modo_solo_lectura_archivos": true,
+    "auto_reparacion_activa": true
+  },
+  "arquitectura_computacional": {
+    "nucleos_minimos": 76,
+    "nucleos_maximos": 88,
+    "frecuencia_base_hz": 432,
+    "modo_balanceo": "granular_estricto",
+    "prioridad_proceso": "realtime"
+  },
+  "ley_fiscal_fesm": {
+    "cumplimiento_activo": true,
+    "esquema_fiscal": "1979_standard_alpha",
+    "auditoria_log": "/var/log/adt/audit_fesm.log"
+  },
+  "nodos_autorizados": {
+    "dispositivos": ["AURA_CORE_SAMSUNG", "AURA_CORE_IPAD"],
+    "restriccion_acceso": "denegar_por_defecto"
+  },
+  "politica_alerta": {
+    "notificar_incumplimiento": true,
+    "accion_ante_violacion": "bloqueo_kernel_inmediato"
+  }
+}

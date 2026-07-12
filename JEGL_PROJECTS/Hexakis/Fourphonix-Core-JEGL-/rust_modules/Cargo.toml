@@ -1,0 +1,23 @@
+[package]
+name = "fourphonix-core-jegl"
+version = "0.1.0"
+edition = "2021"
+authors = ["José Emanuel Guadalupe López <guadalupelopezjose96-coder>"]
+description = "Módulo de Validación de Arquitectura Realidad Real JEGL"
+
+[dependencies]
+# Librería fundamental para el procesamiento paralelo al 100%
+rayon = "1.8.0"
+
+# Opcional: Para el sellado de tiempo y hashes legales (Ley ADT)
+sha2 = "0.10.8"
+
+[profile.release]
+# Optimizaciones de nivel 3 para máximo rendimiento
+opt-level = 3
+# LTO (Link Time Optimization) elimina código muerto y acelera la ejecución
+lto = true
+# Codegen-units = 1 mejora la optimización a costa de un tiempo de compilación más largo
+codegen-units = 1
+# Panic = 'abort' reduce el tamaño del binario y mejora la velocidad
+panic = 'abort'

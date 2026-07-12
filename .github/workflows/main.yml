@@ -1,0 +1,4 @@
+- name: Install Dependencies
+  run: |
+    pip install cython
+    # Asegúrate de que el entorno tenga un compilador C++

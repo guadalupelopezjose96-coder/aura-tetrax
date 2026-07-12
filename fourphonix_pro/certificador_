@@ -1,0 +1,60 @@
+/import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter
+
+def enviar_certificado_vip(nombre_socio, id_socio):
+    # --- 1. CONFIGURACIÓN DE CORREO (JUSTICIA DIGITAL) ---
+    remitente = "owner@fourphonix.com"
+    lista_vip = [
+        "law@standard1979.com", 
+        "owner@fourphonix.com", 
+        "guadalupe@sextofoniatechnology.com", 
+        "guadalupelopezjose96@gmail.com", 
+        "asistencia@standard1979.com"
+    ]
+    
+    # --- 2. GENERACIÓN DINÁMICA DEL PDF ---
+    nombre_archivo = f"Certificado_{id_socio}.pdf"
+    c = canvas.Canvas(nombre_archivo, pagesize=letter)
+    c.setFont("Helvetica-Bold", 24)
+    c.drawCentredString(306, 700, "FEDERACIÓN FOURPHONIX")
+    c.setFont("Helvetica", 18)
+    c.drawCentredString(306, 600, f"BIENVENIDO SOCIO GOLD: {nombre_socio}")
+    c.drawCentredString(306, 570, f"ID: {id_socio}")
+    c.setFont("Helvetica-Oblique", 12)
+    c.drawCentredString(306, 200, "Garantía de Disponibilidad Pro 99.9% Activa")
+    c.save()
+
+    # --- 3. MOTOR DE ENVÍO SMTP ---
+    msg = MIMEMultipart()
+    msg['From'] = remitente
+    msg['To'] = ", ".join(lista_vip)
+    msg['Subject'] = f"🏛️ Certificación VIP: {nombre_socio} - Cromo 3D Pro"
+    
+    cuerpo = f"Estimado Socio, adjunto encontrará su Certificado de Activación bajo el manto del Arq. José Emanuel."
+    msg.attach(MIMEText(cuerpo, 'plain'))
+
+    with open(nombre_archivo, "rb") as adjunto:
+        part = MIMEBase('application', 'octet-stream')
+        part.set_payload(adjunto.read())
+        encoders.encode_base64(part)
+        part.add_header('Content-Disposition', f"attachment; filename= {nombre_archivo}")
+        msg.attach(part)
+
+    try:
+        # Usamos el puerto seguro de tu infraestructura
+        server = smtplib.SMTP('smtp.fourphonix.com', 587)
+        server.starttls()
+        server.login(remitente, "TU_PASSWORD_BUSINESS")
+        server.sendmail(remitente, lista_vip, msg.as_string())
+        server.quit()
+        print(f"🚀 Certificado enviado al 100% a la Federación.")
+    except Exception as e:
+        print(f"❌ Error de Justicia Digital: {e}")
+
+# EJECUTAR PRUEBA FINAL
+enviar_certificado_vip("SOCIO GOLD 01", "FOURPHONIX-VIP-001")

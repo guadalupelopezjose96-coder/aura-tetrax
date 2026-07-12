@@ -1,0 +1,20 @@
+
+​LICENCIA DE USO PRIVADO Y CONFIDENCIAL - AURA-TETRAX (PRO/ELITE)
+​Copyright (C) 2026 José Emanuel Guadalupe López (JEGL). Todos los derechos reservados.
+​Este software (en adelante, el "Producto") es un activo comercial privado propiedad exclusiva de José Emanuel Guadalupe López. El acceso y uso de este Producto están sujetos estrictamente a los siguientes términos y condiciones:
+​1. PROPIEDAD INTELECTUAL
+​El Producto, incluyendo su código fuente, algoritmos de síntesis de frecuencias (432Hz/528Hz), lógica fiscal del framework FESM y estructuras de datos, son propiedad intelectual protegida de JEGL. No se transfiere ningún derecho de propiedad o título al usuario.
+​2. LIMITACIONES DE USO
+​Queda terminantemente prohibido:
+​Realizar ingeniería inversa, descompilación o desensamblaje del Producto.
+​Distribuir, copiar, vender, licenciar o publicar el Producto o cualquier parte del mismo a terceros.
+​Alterar, eliminar u ocultar cualquier aviso de copyright, marca registrada o las protecciones derivadas del "Blindaje de Cero Tolerancia" (Ley Irrevocable).
+​3. LEY IRREVOCABLE E INTEGRIDAD
+​La operación de este Producto está sujeta a las Leyes Irrevocables de soberanía del valor positivo. Cualquier intento de alterar la lógica del sistema para permitir valores negativos o nulos (0) constituirá una violación directa de esta licencia y resultará en la revocación inmediata de los derechos de uso.
+​4. VINCULACIÓN LEGAL
+​El uso de este software implica la aceptación total de los principios establecidos en el Manifiesto de Soberanía Digital firmado el 14 de mayo de 2026 por JEGL. Dicho documento es parte integrante de esta licencia.
+​5. GARANTÍA Y RESPONSABILIDAD
+​Este Producto se entrega "tal cual" (as-is). El propietario no se hace responsable de daños directos o indirectos derivados del uso del sistema. La responsabilidad de mantener la integridad del sistema recae exclusivamente en el usuario bajo las directrices del framework Aura-Tetrax.
+​6. JURISDICCIÓN
+​Cualquier disputa derivada de esta licencia se someterá a la jurisdicción exclusiva establecida por el propietario, protegida por las leyes de propiedad intelectual vigentes.
+​AVISO: Este documento es vinculante. El incumplimiento de cualquiera de estos puntos faculta al propietario para tomar acciones legales inmediatas y la inhabilitación del Producto a distancia.

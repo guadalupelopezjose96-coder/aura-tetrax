@@ -1,0 +1,29 @@
+# ======================================================
+#   CONFIGURACIÓN SOBERANA .BASHRC - JEGL 100%
+# ======================================================
+
+# --- [ ALIAS Y ENTORNO ] ---
+alias v-update='pkg update && pkg upgrade -y'
+alias v-bunker='cd ~/Aura-Tetrax'
+export AUTHOR="JEGL"
+export NUCLEOS=76
+
+# --- [ PROTOCOLO DE INICIO ] ---
+clear
+
+# 1. Dashboard Visual
+if [ -f ~/Aura-Tetrax/v_dashboard_76.py ]; then
+    python ~/Aura-Tetrax/v_dashboard_76.py
+fi
+
+# 2. Activación de 76 Núcleos
+if [ -f ~/Aura-Tetrax/v_core_unlock_76.py ]; then
+    python ~/Aura-Tetrax/v_core_unlock_76.py
+fi
+
+# 3. Sintonía Sónica 528Hz
+if [ -f ~/Aura-Tetrax/v_audio_repair.sh ]; then
+    ~/Aura-Tetrax/v_audio_repair.sh > /dev/null 2>&1 &
+fi
+
+echo "--- [ SOBERANÍA DIGITAL ACTIVA AL 100% ] ---"

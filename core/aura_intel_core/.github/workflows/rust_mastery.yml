@@ -1,0 +1,72 @@
+name: Rust 100% Sovereignty
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  quality-gate:
+    name: 100% Validation & Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust Toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      # 1. Verificación de Formato (cargo fmt)
+      - name: Enforce Formatting
+        run: cargo fmt --all -- --check
+
+      # 2. Análisis Estático (cargo clippy)
+      - name: Run Clippy (Lints)
+        run: cargo clippy -- -D warnings
+
+      # 3. Auditoría de Seguridad (cargo audit)
+      - name: Security Audit (Dependencies)
+        uses: rustsec/audit-check-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 4. Pruebas con Cobertura Total
+      - name: Install cargo-tarpaulin
+        run: cargo install cargo-tarpaulin
+      
+      - name: Run Tests & Generate Coverage
+        run: cargo tarpaulin --fail-under 100 --out Xml
+
+      # 5. Generación de SBOM (CycloneDX)
+      - name: Generate SBOM
+        run: |
+          cargo install cargo-cyclonedx
+          cargo cyclonedx --format json --output-pattern "sbom.json"
+
+      # 6. Build & Sign (Facultad de Integridad)
+      - name: Build Release
+        run: cargo build --release
+
+      - name: Install Cosign (Signing Tool)
+        uses: sigstore/cosign-installer@v3.4.0
+
+      - name: Sign Binary
+        run: |
+          # Nota: Requiere configuración de Keyless signing o Secret Key
+          cosign sign-blob --yes ./target/release/${{ github.event.repository.name }} \
+            --bundle cosign.bundle
+
+      # 7. Upload Artifacts
+      - name: Archive Production Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: secure-binary-package
+          path: |
+            target/release/${{ github.event.repository.name }}
+            sbom.json
+            cosign.bundle

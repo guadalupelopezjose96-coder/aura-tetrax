@@ -1,0 +1,69 @@
+/* * PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+ * PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+ * MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+ * ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+ */
+
+cat <<EOF > cromo.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CROMO-ACÚSTICO PROFESIONAL</title>
+    <style>
+        body { margin: 0; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: sans-serif; transition: background-color 0.5s; overflow: hidden; color: white; text-shadow: 2px 2px 4px #000; }
+        .btn-container { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 90%; z-index: 10; }
+        button { padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.5); color: white; font-size: 14px; cursor: pointer; }
+        #status { margin-bottom: 20px; text-align: center; }
+        .stop { grid-column: span 2; background: #c0392b; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div id="status">
+        <h2 id="frec-display">SISTEMA CROMO-ACÚSTICO</h2>
+        <p>Selecciona una frecuencia para iniciar 10 min de terapia</p>
+    </div>
+    <div class="btn-container">
+        <button onclick="play(174, '#4A4A4A')">174Hz Alivio</button>
+        <button onclick="play(396, '#C0392B')">396Hz Miedo</button>
+        <button onclick="play(417, '#D35400')">417Hz Cambio</button>
+        <button onclick="play(528, '#27AE60')">528Hz ADN</button>
+        <button onclick="play(639, '#2980B9')">639Hz Unión</button>
+        <button onclick="play(741, '#16A085')">741Hz Intuición</button>
+        <button onclick="play(852, '#F1C40F')">852Hz Orden</button>
+        <button onclick="play(963, '#8E44AD')">963Hz Sagrado</button>
+        <button class="stop" onclick="stop()">DETENER TODO</button>
+    </div>
+
+    <script>
+        let ctx, osc, gain, interval;
+        function play(f, c) {
+            stop();
+            ctx = new (window.AudioContext || window.webkitAudioContext)();
+            osc = ctx.createOscillator();
+            gain = ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(f, ctx.currentTime);
+            gain.gain.setValueAtTime(0.1, ctx.currentTime);
+            osc.connect(gain); gain.connect(ctx.destination);
+            osc.start();
+            document.getElementById('frec-display').innerText = f + " Hz Activo";
+            
+            // Gradiente dinámico
+            let step = 0;
+            document.body.style.backgroundColor = c;
+            interval = setInterval(() => {
+                step += 0.05;
+                let op = 0.7 + Math.sin(step) * 0.2;
+                document.body.style.opacity = op;
+            }, 50);
+        }
+        function stop() {
+            if(osc) { osc.stop(); clearInterval(interval); }
+            document.body.style.backgroundColor = '#121212';
+            document.body.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>
+EOF

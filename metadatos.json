@@ -1,0 +1,15 @@
+{
+  "header": {
+    "version": "Standard-1979-v2.1",
+    "law_context": "Ley de Equivalencia Fiscal y Sustentabilidad"
+  },
+  "evidence": {
+    "sha256": "e3b0c44298fc...",
+    "tsa_token": "MIAGCSqGSIb3...",
+    "device_origin": "JEGL-System-76Core-Opt"
+  },
+  "visual_module": {
+    "type": "Realidad Real JEGL",
+    "geometry": "El Cuadrado / El Hexágono"
+  }
+}

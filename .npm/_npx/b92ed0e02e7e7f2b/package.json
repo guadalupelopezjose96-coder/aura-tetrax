@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "create-cloudflare": "^2.70.6"
+  },
+  "_npx": {
+    "packages": [
+      "create-cloudflare@latest"
+    ]
+  }
+}

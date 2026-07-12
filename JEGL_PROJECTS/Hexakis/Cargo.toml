@@ -1,0 +1,14 @@
+[package]
+name = "hexakis"
+version = "0.1.0"
+edition = "2021"
+authors = ["José Emanuel Guadalupe López (JEGL)"]
+
+[dependencies]
+# Para el manejo de los 76 hilos en el Samsung A16
+rayon = "1.8.0"
+# Para procesamiento matemático avanzado
+ndarray = "0.15"
+# Para la integridad de archivos (SHA-256)
+sha2 = "0.10.8"
+

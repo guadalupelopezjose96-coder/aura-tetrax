@@ -1,0 +1,80 @@
+# PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+# PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+# MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+# ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+# 
+
+name: Aura Sovereign Elite - Integridad Total 100%
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  security-and-quality:
+    name: Tribunal de Justicia Rust
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      security-events: write
+
+    steps:
+      - name: 📥 Clonando ADN del Repositorio
+        uses: actions/checkout@v4
+
+      - name: 🦀 Instalando Toolchain de Rust (Elite)
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: 🏎️ Activando Caché de Construcción
+        uses: Swatinem/rust-cache@v2
+
+      # 1. ESTILO Y FORMATO
+      - name: 📏 Verificando Cargo Fmt (Estética Pura)
+        run: cargo fmt --all -- --check
+
+      # 2. ANÁLISIS ESTÁTICO DE ÉLITE
+      - name: 🔍 Ejecutando Cargo Clippy (Maestría Rust)
+        run: cargo clippy -- -D warnings
+
+      # 3. SEGURIDAD Y AUDITORÍA
+      - name: 🛡️ Auditoría de Vulnerabilidades (Cargo Audit)
+        uses: rustsec/audit-check-action@v2.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 4. PRUEBAS CON COBERTURA TOTAL
+      - name: 🧪 Ejecutando Cargo Test (Validación de Lógica)
+        run: cargo test --verbose
+
+      - name: 📊 Generando Cobertura de Código (Tarpaulin)
+        run: |
+          cargo install cargo-tarpaulin
+          cargo tarpaulin --out xml
+
+      # 5. SOBERANÍA DE MATERIALES (SBOM)
+      - name: 📜 Generando SBOM (CyclonDX)
+        run: |
+          cargo install cargo-cyclonedx
+          cargo cyclonedx --format json --output-pattern "aura-intel-core-sbom.json"
+
+      # 6. EMPAQUETADO Y FIRMA (Simulado para CI)
+      - name: 📦 Construcción del Binario Final
+        run: cargo build --release
+
+      - name: ✍️ Generando Hash de Integridad (SHA-256)
+        run: sha256sum target/release/aura_intel_core > integrity_signature.sha256
+
+      # 7. ENTREGA DE ARTEFACTOS DE ÉLITE
+      - name: 💎 Materializando Activos de Seguridad
+        uses: actions/upload-artifact@v4
+        with:
+          name: Aura-Security-Pack
+          path: |
+            aura-intel-core-sbom.json
+            integrity_signature.sha256
+            target/release/aura_intel_core
+            cobertura.xml

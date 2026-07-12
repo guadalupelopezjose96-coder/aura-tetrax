@@ -1,0 +1,31 @@
+{
+  "developer_context": {
+    "identity": "JEGL",
+    "repository_target": "Aura-Tetrax",
+    "hardware_allocation": "76-88 Logical Cores",
+    "environment": "Mobile Termux / iSH (High Optimization Mode)"
+  },
+  "legal_framework": {
+    "core_policy": "Aura Core Basic is 100% free for all populations (Irrevocable)",
+    "compliance_focus": "Law-as-Code / Automated Digital Truth (ADT)"
+  },
+  "signal_precision": {
+    "frequencies": [432, 528],
+    "data_type": "f64 double precision"
+  },
+  "alguna_configuracion_previa": "valor",
+  "JEGL_Sync_Architecture": {
+    "latency_compensation_mode": "algorithmic_local",
+    "acoustic_target_frequencies": [432, 528],
+    "sdr_buffer_retention_max_ms": 1500,
+    "cross_correlation_tolerance_us": 50,
+    "adt_audit_enforcement": true
+  },
+  "JEGL_AuraTetrax_Core_Integration": {
+    "dependency_management": "global_core_modules",
+    "integrated_libraries": ["numpy_optimized", "scipy_dsp_core"],
+    "signature_verification": "GPG_ED25519_strict",
+    "parallel_orchestration": "native_hardware_access",
+    "kernel_law_as_code": "Standard_1979_active"
+  }
+}

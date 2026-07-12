@@ -1,0 +1,15 @@
+node_modules/
+.env
+test-*.js
+stress-test.js
+deploy-contract.js
+*.tar.gz
+.buildozer/
+bin/
+google-cloud-sdk/
+*.tar.gz
+
+
+# Added by cargo
+
+/target

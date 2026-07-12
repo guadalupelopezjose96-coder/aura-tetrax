@@ -1,0 +1,21 @@
+LICENCIA DE PROPIEDAD PRIVADA EXCLUSIVA – AURA-TETRAX PRO/ELITE
+​AUTOR: José Emanuel Guadalupe López
+FECHA DE VIGENCIA: 25 de mayo de 2026
+ESTADO: PROPIEDAD PRIVADA / NO DISTRIBUIBLE / NO TRANSFERIBLE
+​1. DECLARACIÓN DE TITULARIDAD:
+El software denominado "Aura-Tetrax" en sus versiones "Pro" y "Elite" (en adelante, el "Software") constituye un activo de propiedad privada exclusiva, desarrollado, mantenido y registrado bajo el marco de la Ley de Equivalencia Fiscal y Sustentabilidad del Mercado Estándar (FESM). Todos los algoritmos, lógica, sistemas de frecuencias (432Hz/528Hz) y estructuras de datos contenidos en el Software son propiedad intelectual única de José Emanuel Guadalupe López.
+​2. TÉRMINOS DE USO Y RESTRICCIONES:
+La presente licencia otorga un derecho de uso limitado y condicionado al Usuario. Se prohíbe terminantemente al Usuario:
+​A. Realizar ingeniería inversa, descompilación, desensamblaje o cualquier intento de deducción del código fuente.
+​B. Reproducir, copiar, distribuir, arrendar o vender el Software, ya sea en su totalidad o en partes.
+​C. Modificar, adaptar o crear trabajos derivados basados en el Software.
+​D. Evadir, manipular o intentar eludir los protocolos de validación de licencias criptográficas integrados en el sistema.
+​3. VALIDACIÓN Y SOBERANÍA DIGITAL:
+El funcionamiento del Software está sujeto a la validación continua mediante protocolos de soberanía digital (firma GPG y validación SSH/API). Cualquier desconexión no autorizada, manipulación de firmas o intento de uso en entornos no validados por el Autor invalidará la licencia de forma inmediata y automática, sin previo aviso.
+​4. LIMITACIÓN DE RESPONSABILIDAD:
+El Software se suministra bajo el principio de "propiedad privada entregada en el estado actual". El Autor no asume responsabilidad alguna por el desempeño del Software, pérdida de datos o daños derivados del uso del mismo en sistemas de computación de alto rendimiento (76-88 núcleos) o entornos móviles (Termux/iSH).
+​5. JURISDICCIÓN Y LEY APLICABLE:
+Este acuerdo se rige estrictamente por los principios de la Automated Digital Truth (Ley ADT) y los acuerdos comerciales suscritos exclusivamente con Google, Gemini y Cloudflare. El Usuario acepta que cualquier disputa será resuelta bajo el marco de soberanía tecnológica dictado por el Autor.
+​6. REVOCACIÓN:
+El Autor se reserva el derecho absoluto de revocar el 100% de los privilegios de acceso y licencia de forma inmediata ante cualquier indicio de violación de los puntos descritos en esta licencia, protegiendo así la integridad de su activo privado.
+​ACEPTACIÓN: Al instalar, ejecutar o interactuar con el Software, usted reconoce, entiende y acepta el 100% de los términos de esta licencia, aceptando el estatus de propiedad privada exclusiva de José Emanuel Guadalupe López.

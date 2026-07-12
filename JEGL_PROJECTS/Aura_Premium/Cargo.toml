@@ -1,0 +1,28 @@
+[package]
+name = "aura_premium"
+version = "1.0.0"
+edition = "2021"
+authors = ["José Emanuel Guadalupe López (JEGL) <guadalupelopezjose96-coder>"]
+description = "Infraestructura Premium SaaS con validación de licencia y optimización multinúcleo"
+
+[dependencies]
+# Para el manejo y procesamiento ultra rápido de formatos JSON (como el context.json)
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Para realizar las consultas seguras (HTTPS) de validación hacia tu panel central
+reqwest = { version = "0.11", features = ["json", "blocking"] }
+
+# Para el manejo asíncrono eficiente y control de tiempos de ejecución
+tokio = { version = "1.0", features = ["full"] }
+rayon = "1.12.0"
+sha2 = "0.11.0"
+rust_decimal = "1.42.0"
+num_cpus = "1.17.0"
+
+[profile.release]
+# Optimizaciones extremas de compilación para el release final
+opt-level = 3           # Máxima optimización de velocidad para tus 88 núcleos
+lto = true              # Link-Time Optimization para reducir el tamaño del binario y mejorar rendimiento
+codegen-units = 1       # Reduce unidades de generación para permitir mejores optimizaciones globales
+panic = "abort"         # Elimina el rastro de desborde para aligerar el ejecutable y proteger código

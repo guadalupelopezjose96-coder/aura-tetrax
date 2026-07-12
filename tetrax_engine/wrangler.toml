@@ -1,0 +1,16 @@
+name = "aura-intel-gateway"
+main = "src/index.js"
+compatibility_date = "2026-05-01"
+
+# Tus dominios gestionados
+[[routes]]
+pattern = "auraintelcore.com/*"
+custom_domain = true
+
+[[routes]]
+pattern = "standard1979.com/*"
+custom_domain = true
+
+[vars]
+DEVELOPER = "JEGL"
+CORE_VERSION = "1.0.0-PRO"

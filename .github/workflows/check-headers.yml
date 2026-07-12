@@ -1,0 +1,37 @@
+name: "100% Strict Legal Header Verification"
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  verify-headers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code Assets
+        uses: actions/checkout@v4
+
+      - name: Scan Code Files for Authorship Metadata (JEGL)
+        run: |
+          echo "Starting exhaustive verification..."
+          MISSING_HEADERS=0
+          
+          # Escanea archivos de código fuente clave (.rs, .cpp, .py, .sh)
+          find . -type f \( -name "*.rs" -o -name "*.cpp" -o -name "*.py" -o -name "*.sh" \) | while read -r file; do
+            # Ignora la carpeta oculta de git y dependencias de compilación externas
+            if [[ "$file" != *"/.git/"* && "$file" != *"/target/"* ]]; then
+              if ! grep -q "José Emanuel Guadalupe López" "$file" && ! grep -q "JEGL" "$file"; then
+                echo "❌ CRITICAL ERROR: File '$file' lacks required legal authorship headers."
+                MISSING_HEADERS=$((MISSING_HEADERS + 1))
+              fi
+            fi
+          done
+          
+          if [ $MISSING_HEADERS -gt 0 ]; then
+            echo "Action Blocked: Non-compliant files found in changeset."
+            exit 1
+          else
+            echo "✅ 100% Compliance Verified. All core files possess clear authorship headers."
+          fi

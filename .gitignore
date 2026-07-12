@@ -1,0 +1,22 @@
+# Ignorar llaves privadas y credenciales
+.git/
+.ssh/
+*id_rsa*
+*.token
+*.key
+*.passwd
+
+# Ignorar historiales y temporales de la terminal
+.bash_history
+.zsh_history
+.lesshst
+tmp/
+cache/
+*.log
+*.bak
+
+# Ignorar configuraciones específicas del sistema que no son portables
+../usr/
+.gnupg/
+.zcompdump*
+trabajo_rust/ubuntu/rootfs/

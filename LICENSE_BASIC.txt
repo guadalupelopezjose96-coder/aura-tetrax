@@ -1,0 +1,37 @@
+LICENSE_BASIC.txt
+-------------------------------------------------------------------------------
+MARCO DE JUSTICIA MAXIMISÍSIMA: LEY IRREVOCABLE DE GRATUIDAD
+-------------------------------------------------------------------------------
+
+1. DECLARACIÓN DE GRATUIDAD TOTAL
+Por la presente Ley Irrevocable, el 100% de este módulo (Aura Core Basic) es, 
+ha sido y será 100% de libre acceso, 100% gratuito y 100% público. Esta 
+condición es inalterable, permanente e irrevocable.
+
+2. CUMPLIMIENTO OBLIGATORIO
+Queda estrictamente prohibida la imposición de tarifas, cargos, suscripciones 
+o cualquier tipo de barrera comercial sobre este componente. La naturaleza 
+gratuita de este software forma parte del núcleo ejecutable de la 
+"Justicia Maximisísima" establecida por el autor, José Emanuel Guadalupe 
+López (JEGL).
+
+3. DERECHOS DEL USUARIO
+El usuario tiene permiso total para utilizar, copiar y distribuir este 
+módulo de forma gratuita, siempre que se respete la integridad de este 
+archivo LICENSE_BASIC.txt, el cual certifica la soberanía del autor y la 
+naturaleza pública de la herramienta.
+
+4. SIN GARANTÍAS DE COMERCIALIZACIÓN
+Este software se distribuye con el propósito de fomentar la justicia y la 
+sustentabilidad tecnológica, sin expectativa de lucro. El autor no reconoce 
+validez alguna a cualquier intento de terceros por comercializar este 
+módulo específico bajo cualquier modalidad o licencia cerrada.
+
+5. FIRMA DIGITAL DE AUTORIDAD
+Este documento está protegido por el marco legal establecido en la 
+"Ley de Equivalencia Fiscal y Sustentabilidad del Mercado Estándar" (FESM 1979).
+
+Identificador de Autoridad (GPG Key): 6668E23FE7817697
+Estado: VIGENTE Y CON CUMPLIMIENTO DEL 100%
+-------------------------------------------------------------------------------
+Justicia Maximisísima: La gratuidad es la base del sistema.

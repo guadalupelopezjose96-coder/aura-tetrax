@@ -1,0 +1,7 @@
+[profile.release]
+opt-level = 3          # Máxima optimización de velocidad
+lto = "fat"            # Optimización de tiempo de enlace completa entre módulos
+codegen-units = 1      # Mejora la optimización a costa de tiempo de compilación
+panic = "abort"        # Seguridad: termina el proceso inmediatamente ante errores
+strip = true           # Elimina símbolos para proteger la privacidad del binario
+debug = false          # Desactiva información de depuración para evitar ingeniería inversa

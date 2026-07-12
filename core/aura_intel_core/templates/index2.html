@@ -1,0 +1,113 @@
+/* * PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+ * PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+ * MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+ * ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+ */
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FOURPHONIX | Matriz Absoluta</title>
+    <style>
+        :root { --gold: #d4af37; --bg: #000; --card: #111; --text: #d4af37; }
+        body.tema-1979 { --gold: #00ff00; --bg: #050505; --card: #0a0a0a; --text: #00ff00; }
+        body.tema-alquimia { --gold: #d4af37; --bg: #000; --card: #111; --text: #d4af37; }
+        body.tema-soberania { --gold: #000; --bg: #f4f4f4; --card: #fff; --text: #000; }
+        body.tema-inmersivo { --gold: #00d4ff; --bg: #00050a; --card: #001020; --text: #00d4ff; }
+
+        body { background: var(--bg); color: var(--text); font-family: 'Courier New', monospace; margin: 0; transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1); overflow-x: hidden; }
+        .header { padding: 25px; border-bottom: 2px solid var(--gold); text-align: center; }
+        .interface-selector { display: flex; justify-content: center; gap: 15px; margin: 15px auto; width: fit-content; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 50px; }
+        .dot { width: 22px; height: 22px; border-radius: 50%; cursor: pointer; border: 2px solid #fff; transition: 0.3s; }
+        .container { max-width: 450px; margin: auto; padding: 15px; }
+        .service-box { background: var(--card); border: 1px solid #333; margin: 15px 0; padding: 20px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        canvas { width: 100%; border: 1px solid var(--gold); border-radius: 8px; background: #000; }
+        .btn { background: var(--gold); color: var(--bg); border: none; padding: 18px; width: 100%; font-weight: bold; border-radius: 50px; cursor: pointer; text-transform: uppercase; margin-top: 15px; letter-spacing: 2px; }
+        .price-display { font-size: 2.8em; text-align: center; margin: 15px 0; color: #fff; text-shadow: 0 0 10px var(--gold); }
+    </style>
+</head>
+<body class="tema-alquimia">
+
+<div class="header">
+    <h1 style="letter-spacing: 12px; margin: 0;">FOURPHONIX</h1>
+    <div class="interface-selector">
+        <div class="dot" style="background: #00ff00;" onclick="setInterfaz('tema-1979', 'TERMINAL 1979')"></div>
+        <div class="dot" style="background: #d4af37;" onclick="setInterfaz('tema-alquimia', 'ALQUIMIA GLOBAL')"></div>
+        <div class="dot" style="background: #ffffff;" onclick="setInterfaz('tema-soberania', 'SOBERANÍA WHITE')"></div>
+        <div class="dot" style="background: #00d4ff;" onclick="setInterfaz('tema-inmersivo', 'CÁPSULA INMERSIVA')"></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="service-box">
+        <h4 id="status">ESTADO: BÚNKER STANDBY</h4>
+        <input type="file" id="upload" style="font-size: 0.7em; width: 100%;">
+        <canvas id="mainCanvas"></canvas>
+        <button class="btn" onclick="absolutizarEfectos()">Absolutizar Efectos Positivos</button>
+    </div>
+
+    <div class="service-box" style="border: 1px solid var(--gold);">
+        <h4 style="text-align: center;">ADQUISICIÓN DE INGENIERÍA</h4>
+        <form action="/checkout" method="POST">
+            <div style="font-size: 1em; line-height: 2.5;">
+                <input type="checkbox" name="fase" value="90.75" checked onclick="return false;"> Saneamiento ($90.75)<br>
+                <input type="checkbox" name="fase" value="90.75" class="chk"> Mezcla Pro (+$90.75)<br>
+                <input type="checkbox" name="fase" value="90.75" class="chk"> Remezcla (+$90.75)
+            </div>
+            <div class="price-display" id="total">$90.75</div>
+            <button type="submit" class="btn" style="box-shadow: 0 0 20px rgba(212,175,55,0.4);">Procesar en Stripe</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    const canvas = document.getElementById('mainCanvas');
+    const ctx = canvas.getContext('2d');
+    let imgO = null;
+
+    function setInterfaz(tema, nombre) {
+        document.body.className = tema;
+        document.getElementById('status').innerText = `MODO: ${nombre}`;
+        if(window.navigator.vibrate) window.navigator.vibrate(60);
+    }
+
+    document.getElementById('upload').onchange = (e) => {
+        const r = new FileReader();
+        r.onload = (ev) => {
+            imgO = new Image();
+            imgO.onload = () => {
+                canvas.width = imgO.width; canvas.height = imgO.height;
+                ctx.drawImage(imgO, 0, 0);
+            };
+            imgO.src = ev.target.result;
+        };
+        r.readAsDataURL(e.target.files[0]);
+    };
+
+    function absolutizarEfectos() {
+        if(!imgO) return;
+        // INYECCIÓN DE EFECTOS POSITIVOS 100% DIGITALES
+        ctx.filter = "contrast(1.15) brightness(1.05) saturate(1.1) sepia(0.2)";
+        ctx.drawImage(imgO, 0, 0);
+        ctx.filter = "none";
+        
+        // Efecto de Nitidez de Ingeniería
+        ctx.globalCompositeOperation = "soft-light";
+        ctx.drawImage(canvas, 0, 0);
+        ctx.globalCompositeOperation = "source-over";
+
+        document.getElementById('status').innerText = "EFECTOS: 100% ABSOLUTIZADOS";
+        if(window.navigator.vibrate) window.navigator.vibrate([100, 50, 100]);
+    }
+
+    const chks = document.querySelectorAll('.chk');
+    const disp = document.getElementById('total');
+    chks.forEach(c => c.onchange = () => {
+        let ex = document.querySelectorAll('.chk:checked').length;
+        disp.innerText = `$${(90.75 + (ex * 90.75)).toFixed(2)}`;
+    });
+</script>
+</body>
+</html>

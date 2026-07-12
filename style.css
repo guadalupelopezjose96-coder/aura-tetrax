@@ -1,0 +1,45 @@
+/* * PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+ * PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+ * MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+ * ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+ */
+
+/* --- FOURPHONIX AURA VISUAL STYLE --- */
+body {
+    background-color: #000000;
+    color: #00ff41; /* Verde Matrix */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden; /* Evita barras de desplazamiento feas */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#log-output {
+    flex-grow: 1;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.5;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+/* Colores especiales para los Reportes de Éxito */
+.success-text { color: #00ffff; font-weight: bold; text-transform: uppercase; }
+.freq-data { color: #888; font-size: 12px; }
+.report-block { color: #ffffff; background: rgba(255,255,255,0.1); padding: 5px; margin: 5px 0; }
+
+.cursor {
+    animation: blink 1s infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Scrollbar estilo minimalista */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: #00ff41; }

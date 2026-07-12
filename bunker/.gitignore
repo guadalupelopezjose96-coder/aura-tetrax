@@ -1,0 +1,9 @@
+cat <<EOF > ~/bunker/.gitignore
+# Bloqueo de secretos para evitar rechazo de GitHub
+*.env
+*.key
+id_ed25519*
+triaconta_key*
+secrets/
+config_privada.json
+EOF

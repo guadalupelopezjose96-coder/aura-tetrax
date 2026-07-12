@@ -1,0 +1,25 @@
+/* * PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+ * PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+ * MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+ * ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+ */
+
+<div class="card-jegl" style="grid-column: span 3; height: 300px;">
+    <h3>RADAR GLOBAL DE SOBERANÍA</h3>
+    <div id="mapa_v" style="height: 100%; border: 1px solid #238636;"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+<script>
+    var map = L.map('mapa_v').setView([20, 0], 2); // Vista global
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png').addTo(map);
+
+    // Función para marcar ingresos legales detectados
+    function marcarIngreso(lat, lon, ciudad) {
+        L.marker([lat, lon]).addTo(map)
+            .bindPopup("Ingreso Legal: " + ciudad)
+            .openPopup();
+    }
+</script>

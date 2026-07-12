@@ -1,0 +1,5 @@
+name = "mi-validador-edge"
+main = "src/index.ts"
+compatibility_date = "2026-06-26"
+
+# No incluyas aquí tu clave secreta para mantener la seguridad

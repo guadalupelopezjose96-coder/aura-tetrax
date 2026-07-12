@@ -1,0 +1,22 @@
+[package]
+name = "aura-tetrax-telemetria"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+# Criptografía de alto rendimiento y seguridad (estándar ED25519)
+ed25519-dalek = "2.1"
+# Manejo rápido de tipos para hexadecimal
+hex = ">=0.4.3"
+# Serialización ultrarrápida (mejor que JSON estándar para telemetría)
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+# Optimización para manejo de tiempo y precisión
+chrono = "0.4"
+
+[profile.release]
+# Optimización máxima para asegurar los 116ns de tiempo de respuesta
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"

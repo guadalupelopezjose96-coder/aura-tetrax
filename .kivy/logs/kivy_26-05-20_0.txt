@@ -1,0 +1,9 @@
+[INFO   ] Logger: Record log in /data/data/com.termux/files/home/.kivy/logs/kivy_26-05-20_0.txt
+[INFO   ] Kivy: v2.3.1
+[INFO   ] Kivy: Installed at "/data/data/com.termux/files/usr/lib/python3.13/site-packages/kivy/__init__.py"
+[INFO   ] Python: v3.13.13 (main, Apr 10 2026, 16:12:19) [Clang 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 5e96669f0
+[INFO   ] Python: Interpreter at "/data/data/com.termux/files/usr/bin/python"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 195 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)

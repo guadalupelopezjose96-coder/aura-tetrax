@@ -1,0 +1,22 @@
+[package]
+name = "sonic_geometry_engine"
+version = "0.1.0"
+edition = "2021"
+authors = ["José Emanuel Guadalupe López (JEGL) <guadalupelopezjose96-coder>"]
+description = "Motor de Síntesis Acústica Determinista y Geometría Sónica"
+
+[dependencies]
+rayon = "1.10"
+num_cpus = "1.17"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+hound = "3.5"
+chrono = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+

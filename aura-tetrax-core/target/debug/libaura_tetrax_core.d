@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/aura-tetrax-core/target/debug/libaura_tetrax_core.rlib: /data/data/com.termux/files/home/aura-tetrax-core/src/audit.rs /data/data/com.termux/files/home/aura-tetrax-core/src/fiscal.rs /data/data/com.termux/files/home/aura-tetrax-core/src/lib.rs

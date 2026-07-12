@@ -1,0 +1,8 @@
+[package]
+name = "monitor_nucleos"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sysinfo = "0.29"
+rand = "0.8"

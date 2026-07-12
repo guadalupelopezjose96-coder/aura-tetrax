@@ -1,0 +1,10 @@
+# Forzar el aislamiento absoluto de llaves y datos de producción
+*.gpg
+*.key
+*.secret
+config/production_env.json
+
+
+# Added by cargo
+
+/target

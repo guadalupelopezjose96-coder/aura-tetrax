@@ -1,0 +1,31 @@
+CONTRATO DE LICENCIA DE USUARIO FINAL (EULA) - AURA-TETRAX (EDICIONES PRO/ELITE)
+
+1. TITULARIDAD Y DERECHOS DE PROPIEDAD
+El presente software (en adelante, "la Aplicación") es propiedad exclusiva y total de José Emanuel Guadalupe López (JEGL). Esta licencia no transfiere ningún derecho de propiedad, título o interés sobre el código fuente, la lógica algorítmica ni los secretos comerciales contenidos en las versiones Pro y Elite. Todo el contenido es resultado de la metodología Ley-as-Code y es propiedad intelectual protegida por las leyes internacionales de derecho de autor.
+
+2. OTORGAMIENTO DE LICENCIA
+Se concede al usuario una licencia limitada, personal, no exclusiva, intransferible y revocable para utilizar la Aplicación exclusivamente para sus fines personales o profesionales autorizados. Queda terminantemente prohibido el uso de la Aplicación para el desarrollo de productos derivados, competencia desleal o cualquier otro fin que vulnere la integridad de la arquitectura de Aura-Tetrax.
+
+3. RESTRICCIONES DE USO
+El usuario se compromete a:
+* NO realizar ingeniería inversa, descompilación, desmontaje ni intentos de extraer el código fuente de las versiones Pro/Elite.
+* NO distribuir, alquilar, arrendar, vender, sublicenciar o transferir la Aplicación a terceros sin la autorización expresa y escrita del titular.
+* NO modificar, alterar o eliminar las marcas, avisos de derechos de autor o firmas digitales de autenticidad integradas en la Aplicación.
+
+4. LIMITACIÓN DE RESPONSABILIDAD (ASISTENCIA TÉCNICA)
+La Aplicación se proporciona "tal cual". Dado que Aura-Tetrax implementa lógica de Ley de Equivalencia Fiscal y Sustentabilidad (FESM), el usuario reconoce que:
+* El software actúa únicamente como una herramienta de asistencia técnica y automatización.
+* El usuario es el único responsable del cumplimiento de sus obligaciones fiscales y legales ante las autoridades de su jurisdicción.
+* El desarrollador no se hace responsable por errores de interpretación, discrepancias fiscales o consecuencias legales derivadas del uso de la herramienta.
+
+5. FIRMA Y AUTENTICIDAD
+Toda copia autorizada de esta Aplicación debe presentar una firma digital válida mediante clave GPG emitida por el titular. Cualquier copia que carezca de dicha firma o que presente un hash distinto al original se considera una versión no autorizada y constituye una violación de los derechos de autor.
+
+6. CLÁUSULA DE REVOCACIÓN
+El titular se reserva el derecho de revocar esta licencia de forma inmediata en caso de incumplimiento de cualquiera de las cláusulas aquí descritas, sin necesidad de notificación previa y sin reembolso alguno.
+
+7. INTEGRIDAD DE LA GEOMETRÍA SÓNICA (432Hz/528Hz)
+El motor de procesamiento de esta Aplicación opera bajo parámetros técnicos de Sonic Geometry y Cromo Acústico (frecuencias de 432Hz y 528Hz). Cualquier intento de alteración, resampleo o modificación no autorizada de los osciladores o de la integridad de la señal de audio que comprometa la configuración original del núcleo Aura-Tetrax se considera una violación de la integridad funcional del software y es causal inmediata de revocación de esta licencia.
+
+8. VINCULACIÓN AL MANIFIESTO DE SOBERANÍA DIGITAL
+Esta licencia es un componente indivisible de la soberanía digital del autor. Al aceptar este contrato, el usuario reconoce expresamente la validez del Manifiesto de Soberanía Digital (registrado el 14 de mayo de 2026) y se compromete a respetar la integridad del legado digital de JEGL. El usuario declara entender que este software no es simplemente una herramienta comercial, sino un activo soberano sujeto a las leyes irrevocables establecidas por el arquitecto del sistema.

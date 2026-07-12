@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/JEGL_PROJECTS/Aura_Premium/dist/law_core_engine/target/release/law_core_engine: /data/data/com.termux/files/home/JEGL_PROJECTS/Aura_Premium/dist/law_core_engine/src/audit.rs /data/data/com.termux/files/home/JEGL_PROJECTS/Aura_Premium/dist/law_core_engine/src/main.rs

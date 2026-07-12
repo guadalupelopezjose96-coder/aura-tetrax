@@ -1,0 +1,21 @@
+name: Rust 100% Mastery
+on: [push, pull_request]
+jobs:
+  secure-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+      - name: Format Check
+        run: cargo fmt --all -- --check
+      - name: Security Audit
+        uses: rustsec/audit-check-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Lints
+        run: cargo clippy -- -D warnings
+      - name: Test Coverage
+        run: cargo test --release

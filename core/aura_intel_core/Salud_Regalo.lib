@@ -1,0 +1,6 @@
+// DISTRIBUCIÓN DE GRACIA IMPERIAL
+void Apply_Regalo_Salud() {
+    Hex_Sonic_Vibration_Hz(HEALTHY_FREQ); // Salud Auditiva
+    Square_Visual_Alignment(TRUE);        // Salud Visual Básica
+    Set_Persistence(FOREVER_AND_EVER);
+}

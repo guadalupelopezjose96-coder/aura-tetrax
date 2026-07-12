@@ -1,0 +1,97 @@
+# name: release to github
+
+# on:
+#   push:
+#     tags:
+#       - "*.*.*"
+
+# jobs:
+#   doc:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#         with:
+#           fetch-depth: 0
+#       - name: 'Get Previous tag'
+#         id: previoustag
+#         uses: "WyriHaximus/github-action-get-previous-tag@v1"
+#       - name: 'Get previous release tag'
+#         id: tag
+#         uses: "sammcoe/get-previous-release-action@v1"
+#       - name: replace version
+#         run: sed -i "s/${{steps.tag.outputs.tag}}/${{steps.previoustag.outputs.tag}}/g" README*.md
+#       - name: Create Pull Request
+#         id: cpr
+#         uses: peter-evans/create-pull-request@v4
+#         with:
+#           commit-message: Update README file.
+#           author: GitHub <noreply@github.com>
+#           signoff: false
+#           branch: doc/${{steps.previoustag.outputs.tag}}
+#           labels: document
+#           base: main
+#           delete-branch: true
+#           title: 'doc: update README files version to ${{steps.previoustag.outputs.tag}}'
+#           body: |
+#             **在提出此拉取请求时，我确认了以下几点（保存后请点击复选框）：**
+
+#             - [x] 标题为fix、feat或doc开头
+#             - [x] 我已检查没有与此请求重复的拉取请求。
+#             - [x] 我已经考虑过，并确认这份呈件对其他人很有价值。
+#             - [x] 我接受此提交可能不会被使用，并根据维护人员的意愿关闭拉取请求。
+
+#             **填写PR内容：**
+
+#             - Update README files version to latest tag by bot 🚀.
+
+#           draft: false
+#       - name: Auto approve
+#         if: steps.cpr.outputs.pull-request-operation == 'created'
+#         uses: juliangruber/approve-pull-request-action@v1
+#         with:
+#           github-token: ${{ secrets.PAT }}
+#           number: ${{ steps.cpr.outputs.pull-request-number }}
+#       - id: automerge
+#         name: automerge
+#         uses: "pascalgn/automerge-action@v0.15.3"
+#         env:
+#           MERGE_LABELS: "document"
+#           MERGE_DELETE_BRANCH: true
+#           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+#           PULL_REQUEST: ${{ steps.cpr.outputs.pull-request-number }}
+#           MERGE_RETRIES: 18
+#           MERGE_RETRY_SLEEP: 10000
+
+#   release:
+#     needs: doc
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#         with:
+#           fetch-depth: 0
+#       - name: 'Get Previous tag'
+#         id: previoustag
+#         uses: "WyriHaximus/github-action-get-previous-tag@v1"
+#       - name: replace version
+#         run: sed -i "s/SONIC_VERSION/${{ steps.previoustag.outputs.tag }}/g" pom.xml
+#       - name: Set up Maven Central Repo
+#         uses: actions/setup-java@v1
+#         with:
+#           java-version: 1.8
+#           server-id: sonatype-nexus-staging
+#           server-username: ${{ secrets.OSSRH_USER }}
+#           server-password: ${{ secrets.OSSRH_PASSWORD }}
+#           gpg-passphrase: ${{ secrets.GPG_PASSWORD }}
+#       - name: Release Maven package
+#         uses: WasiqB/maven-publish-action@v1
+#         with:
+#           maven_args: -Dmaven.test.skip=true
+#           gpg_private_key: ${{ secrets.GPG_SECRET }}
+#           gpg_passphrase: ${{ secrets.GPG_PASSWORD }}
+#           nexus_username: ${{ secrets.OSSRH_USER }}
+#           nexus_password: ${{ secrets.OSSRH_PASSWORD }}
+#       - uses: softprops/action-gh-release@v1
+#         with:
+#           draft: false
+#           generate_release_notes: true
+# # mvn clean deploy -Pdeploy -Dmaven.test.skip=true

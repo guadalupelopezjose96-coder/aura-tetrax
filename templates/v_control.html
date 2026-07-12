@@ -1,0 +1,40 @@
+/* * PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+ * PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+ * MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+ * ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+ */
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        body { background-color: #0d1117; color: #238636; font-family: 'Courier New', monospace; padding: 20px; }
+        .grid-v { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .card-jegl { border: 1px solid #238636; padding: 15px; background: #161b22; box-shadow: 0 0 10px #238636; }
+        .status-v { color: #58a6ff; font-weight: bold; }
+        h1 { border-bottom: 2px solid #238636; padding-bottom: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>CENTRO DE MANDO JEGL - JUSTICIA MAXIMISISISIMA</h1>
+    <div class="grid-v">
+        <div class="card-jegl">
+            <h3>FINANZAS ELITE</h3>
+            <p>Saldo Stripe: <span class="status-v">${{ ingresos }} USD</span></p>
+        </div>
+        <div class="card-jegl">
+            <h3>TRIPLE ENLACE</h3>
+            <ul>
+                {% for dominio, estado in nodos.items() %}
+                <li>{{ dominio }}: <span class="status-v">{{ estado }}</span></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="card-jegl">
+            <h3>HARDWARE V</h3>
+            <p>Estado: <span class="status-v">ACTIVO</span></p>
+            <p>Nodo Actual: iPad 256GB</p>
+        </div>
+    </div>
+</body>
+</html>

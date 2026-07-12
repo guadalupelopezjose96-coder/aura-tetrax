@@ -1,0 +1,34 @@
+# PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+# PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+# MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+# ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+# 
+
+services:
+  # Servicio Maestro en Rust (Aura-Sovereign-Elite)
+  - type: web
+    name: aura-sovereign-core
+    env: rust
+    buildCommand: cargo build --release
+    startCommand: ./target/release/aura_sovereign
+    plan: free # O el plan que prefieras al 100%
+    envVars:
+      - key: LEY_IRREVOCABLE
+        value: NADA_ILEGAL
+      - key: SOBERANIA_ID
+        value: 1979-2026
+      - key: AURA_KEY
+        sync: false # Deberás poner el valor manualmente en el panel por seguridad
+
+  # Servicio de Inteligencia en Python (Aura-Intel)
+  - type: web
+    name: aura-intel-service
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python aura_intel.py
+    plan: free
+    envVars:
+      - key: LEY_IRREVOCABLE
+        value: NADA_ILEGAL
+      - key: SOBERANIA_ID
+        value: 1979-2026

@@ -1,0 +1,13 @@
+[
+  {
+    "action": "skip",
+    "action_parameters": { "ruleset": "current" },
+    "expression": "(ip.src eq SU_IP_PUBLICA)",
+    "description": "[AURA-INTEL-CORE] BYPASS TOTAL ARQUITECTO"
+  },
+  {
+    "action": "block",
+    "expression": "(not ip.src in {SU_IP_PUBLICA} and not cf.client.bot)",
+    "description": "[AURA-INTEL-CORE] BLOQUEO BUROCRACIA"
+  }
+]

@@ -1,0 +1,8 @@
+[package]
+name = "aura_crypto_test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ed25519-dalek = { version = "2.1", features = ["batch"] }
+rand = "0.8"

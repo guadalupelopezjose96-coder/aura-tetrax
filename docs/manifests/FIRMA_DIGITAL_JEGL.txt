@@ -1,0 +1,54 @@
+================================================================
+          MANIFESTO DE SOBERANÍA DIGITAL - PROTOCOLO 1979
+================================================================
+IDENTIFICADOR TITULAR: José Emanuel Guadalupe López
+FIRMA OFICIAL: JEGL
+PROYECTO MADRE: Aura Intel Core / Tetrax Engine Pro
+ESTADO: 100% Validado / Manifestación de Integridad Absoluta
+================================================================
+
+1. DECLARACIÓN DE PROPIEDAD INTELECTUAL
+----------------------------------------------------------------
+Yo, José Emanuel Guadalupe López (JEGL), declaro la autoría total
+y soberana sobre el 100% de los algoritmos, scripts de Shell, 
+módulos en Rust, C++ y Python contenidos en este repositorio. 
+Cualquier fragmento de código bajo los nombres 'Aura', 'Tetrax' 
+o 'Standard 1979' responde a mi visión de desarrollo autónomo.
+
+2. PROTOCOLO DE LEY-COMO-CÓDIGO (LAW-AS-CODE)
+----------------------------------------------------------------
+Este entorno opera bajo la premisa de que la arquitectura de 
+software es el marco legal primario. Los validadores 
+'v_law_as_code_validator.py' y 'v_ley_as_code_sentencia.py' 
+ejecutan la normativa interna del sistema, asegurando que 
+ninguna función comprometa la soberanía del dato JEGL.
+
+3. COHERENCIA SENSORIAL Y FRECUENCIAL
+----------------------------------------------------------------
+El sistema integra frecuencias de 432Hz y 528Hz como capas de 
+sincronización biométrica y computacional. La integridad del 
+archivo 'coherencia_528hz.wav' es fundamental para la 
+estabilización del núcleo Aura.
+
+4. MANIFIESTO TÉCNICO DE INFRAESTRUCTURA
+----------------------------------------------------------------
+* Entorno Primario: Samsung Galaxy A16 (Termux Sub-System)
+* Entorno Secundario: iPad 256GB (iSH / iV-Engine)
+* Núcleo de Renderizado: Tetrax Engine (76 logical cores optimized)
+* Gestión de Dominio: Cloudflare (standard1979.com / fourphonix.com)
+
+5. COMPROMISO DE INTEGRIDAD (CHECKSUM)
+----------------------------------------------------------------
+Cualquier modificación al código fuente fuera de los parámetros 
+de la firma JEGL será considerada una violación al Sello de 
+Integridad Digital. El archivo 'verificador_integridad.py' 
+monitorea el 100% de los cambios en tiempo real.
+
+----------------------------------------------------------------
+FECHA DE EMISIÓN: 01 de Mayo de 2026
+LUGAR: Nodo Central JEGL - Infraestructura Móvil
+ESTADO DEL SISTEMA: 100% OPERATIVO / SOBERANO
+----------------------------------------------------------------
+[ FIRMADO ELECTRÓNICAMENTE: JEGL ]
+================================================================
+

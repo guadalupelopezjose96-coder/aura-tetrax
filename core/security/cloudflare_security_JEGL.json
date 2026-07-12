@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "action": "block",
+      "description": "Protección de Integridad JEGL - Ley ADT",
+      "expression": "(http.request.uri.path contains '/core/' and not http.request.headers[\"x-jegl-integrity-token\"])",
+      "enabled": true
+    },
+    {
+      "action": "allow",
+      "description": "Acceso Validado Cromo Acústico",
+      "expression": "(http.request.headers[\"x-security-mode\"] eq \"acoustic-v\")",
+      "enabled": true
+    }
+  ]
+}

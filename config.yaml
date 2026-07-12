@@ -1,0 +1,19 @@
+# PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+# PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+# MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+# ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+# 
+
+tunnel: <TU_TUNNEL_ID>
+credentials-file: /data/data/com.termux/files/home/.cloudflared/<TU_TUNNEL_ID>.json
+protocol: quic
+originRequest:
+  connectTimeout: 30s
+  noTLSVerify: true
+ingress:
+  - hostname: fourphonix.com
+    service: http://localhost:80
+  - service: http_status:404
+autoupdate: true
+retries: 10
+backoff: 5s

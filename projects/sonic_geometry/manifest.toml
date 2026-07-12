@@ -1,0 +1,41 @@
+# ==============================================================================
+# MANIFIESTO TÉCNICO OFICIAL - PROPIEDAD DE JEGL
+# ESTADO: 100% DEBIDO | 100% LEGAL | COMPLIANCE TOTAL
+# ==============================================================================
+
+[metadata]
+architect = "JEGL"
+framework_version = "2026.5"
+compliance_status = "Approved - Law-as-Code Validated"
+adt_signature_hash = "SHA256_VERIFIED_AUTOMATED_DIGITAL_TRUTH"
+
+[hardware_architecture]
+target_logical_cores = 88
+numa_node_balancing = true
+thread_affinity_policy = "Strict_Isolation"
+execution_environments = ["Termux", "iSH", "iPadOS_Production", "A16_Node"]
+mobile_thermal_throttling = true
+
+[audio_geometry_engine]
+pure_waveforms = [432, 528]
+floating_precision = "f64"
+master_sample_rate_hz = 48000
+jitter_compensation = true
+
+[law_as_code_enforcement]
+framework_primary = "Ley ADT"
+fiscal_standard = "Standard 1979 (Ley de Equivalencia Fiscal)"
+commercial_license = "Proprietary_Commercial_Tetrax_Policy_Active"
+tetrax_free_tier_allowed = false
+
+[network_exchange_matrix]
+authorized_partners = ["Cloudflare", "Google", "Gemini"]
+unauthorized_partners = ["Stripe", "Spectrum"]
+active_case_reference = "71204722"
+block_unauthorized_traffic = true
+
+[security_pipeline]
+emergency_trigger = "src/bin/purga"
+zero_trust_log_sanitization = true
+pre_commit_sanitization = true
+

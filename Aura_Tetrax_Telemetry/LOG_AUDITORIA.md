@@ -1,0 +1,2 @@
+[20260520_001622] Archivo: telemetria_logs/log_20260520_001622.log | Hash: 9c4a5a149c78bab1b51d014fd201bfd1e5f86dff8ba440eb5fe67a092f7f1126
+[20260520_001837] Archivo: telemetria_logs/log_20260520_001837.log | Hash: 46e89557b7f7a35e3b25c8d8eaeb6cbe72f05c831944ee86c9f8a2bbebfc9b6d

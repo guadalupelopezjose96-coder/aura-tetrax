@@ -1,0 +1,32 @@
+{
+  "rules": [
+    {
+      "name": "[AURA-INTEL-CORE] BYPASS SOBERANO IPAD-SAM",
+      "action": "skip",
+      "expression": "(ip.src in {SU_IP_HOTSPOT})",
+      "description": "Acceso total sin filtrado para el Arquitecto López"
+    },
+    {
+      "name": "[AURA-INTEL-CORE] INTERCAMBIO STANDARD A PROPHONIX",
+      "action": "redirect",
+      "expression": "(http.host eq \"standard1979.com\")",
+      "parameters": {
+        "from_status": 301,
+        "to_url": "https://prophonix.com",
+        "preserve_query_string": true
+      }
+    },
+    {
+      "name": "[AURA-INTEL-CORE] BLOQUEO BUROCRACIA GLOBAL",
+      "action": "block",
+      "expression": "(not ip.src in {SU_IP_HOTSPOT} and not cf.client.bot)",
+      "description": "Invisibilidad total ante accesos no autorizados"
+    }
+  ],
+  "settings": {
+    "min_tls_version": "1.3",
+    "security_level": "under_attack",
+    "brotli": "on",
+    "early_hints": "on"
+  }
+}

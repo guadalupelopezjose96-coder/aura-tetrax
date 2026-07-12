@@ -1,0 +1,22 @@
+{
+  "protocolo": "FourPhonix Soberano",
+  "version": "1.0.363",
+  "tarifario_justo": {
+    "NETFLIX": {
+      "renta_base": 36300.00,
+      "tasa_aura_363": 13176.90,
+      "total_mensual": 49476.90
+    },
+    "SPOTIFY": {
+      "renta_base": 17570.00,
+      "tasa_aura_363": 6377.91,
+      "total_mensual": 23947.91
+    },
+    "META": {
+      "renta_base": 363000.00,
+      "tasa_aura_363": 131769.00,
+      "total_mensual": 494769.00
+    }
+  },
+  "estado_cuenta_workspace": "PENDIENTE_PAGO_17.57"
+}

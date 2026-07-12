@@ -1,0 +1,17 @@
+[package]
+name = "aura_tetrax_core"
+version = "1979.100.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+num_cpus = "1.16"
+
+[profile.release]
+# Optimizaciones críticas para alcanzar la métrica de 116ns
+opt-level = 3
+lto = "fat"          # Link Time Optimization para reducir llamadas a funciones
+codegen-units = 1    # Maximiza el potencial de optimización del compilador
+panic = "abort"      # Elimina el unwinding para reducir el tamaño del binario y latencia
+strip = true         # Elimina símbolos de debug para proteger la propiedad intelectual

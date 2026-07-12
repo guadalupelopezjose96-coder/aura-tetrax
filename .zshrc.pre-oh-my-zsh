@@ -1,0 +1,22 @@
+# --- Configuración Zsh Termux 100% ---
+
+# 1. Cargar plugins con rutas automáticas de Termux
+# Estas rutas funcionan en el 100% de las instalaciones de pkg
+source $PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null || source /data/data/com.termux/files/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source $PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null || source /data/data/com.termux/files/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# 2. Alias de Seguridad
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# 3. Opciones de Historial (Ahora sí funcionan al 100%)
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_SPACE
+
+# 4. Prompt Personalizado
+PROMPT='%F{cyan}Termux%f:%F{green}%~%f$ '
+

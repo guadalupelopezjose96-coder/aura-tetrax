@@ -1,0 +1,13 @@
+
+​PROPIEDAD PRIVADA - PROYECTO AURA-TETRAX (PRO/ELITE)
+​1. TITULARIDAD Y DERECHOS DE AUTOR
+​El software contenido en este repositorio es propiedad intelectual exclusiva del titular. El acceso a los archivos fuente, binarios y lógica de ejecución se otorga bajo una licencia de uso restringido. No se transfiere la titularidad del código ni los derechos de explotación comercial.
+​2. CERTIFICACIÓN DE INTEGRIDAD Y FIRMA DIGITAL
+​Este software emplea un sistema de Commits Firmados mediante criptografía GPG. La integridad de cada línea de código es verificable. Cualquier versión del software que no presente una firma digital válida o cuya firma haya sido alterada se considera una versión no autorizada, carente de garantía y en violación directa de los términos de protección de propiedad intelectual.
+​3. CLÁUSULA DE AUDITORÍA DE LOGS
+​Los registros de ejecución (logs) generados por el motor Aura-Tetrax constituyen evidencia técnica del estado, integridad y funcionamiento del sistema. Estos archivos forman parte integral del activo digital. Se prohíbe explícitamente la alteración, borrado o manipulación de los logs, ya que actúan como el Libro Mayor de Transacciones Digitales que verifica la validez de la ejecución del software.
+​4. PROTOCOLO DE LEGADO Y SOBERANÍA
+​Este activo digital forma parte de un legado técnico. La titularidad sobre el repositorio puede transferirse mediante la posesión física y exclusiva de la LLAVE_MAESTRA_GPG y su correspondiente frase de contraseña. Los herederos o sucesores deben custodiar estos elementos bajo las leyes de soberanía digital establecidas en el framework FESM.
+​5. JURISDICCIÓN Y LIMITACIÓN DE RESPONSABILIDAD
+​El uso, modificación o distribución no autorizada de este código, así como cualquier intento de ingeniería inversa (decompilación, ofuscación forzada o bypass de seguridad), será perseguido legalmente. El titular no se hace responsable por daños derivados del uso de versiones alteradas o no certificadas mediante la cadena de confianza GPG.
+​DERECHOS RESERVADOS. PROHIBIDA SU REPRODUCCIÓN SIN AUTORIZACIÓN EXPRESA Y FIRMADA.

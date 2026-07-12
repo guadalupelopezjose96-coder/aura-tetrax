@@ -1,0 +1,29 @@
+================================================================
+ESTADO DE SOBERANÍA DIGITAL: AURA-TETRAX
+PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+FECHA DE CONSOLIDACIÓN: 2026-05-20
+ESTADO DEL BLINDAJE: INTEGRIDAD TOTAL (LEY ADT)
+================================================================
+
+INSTRUCCIONES DE AUDITORÍA FORENSE:
+
+1. VERIFICACIÓN DE IDENTIDAD:
+   Comando: git log --show-signature -1
+   Objetivo: Confirmar que el último commit fue firmado por la llave GPG:
+   2AA545133B782DA5084BDC2CB9297EFFE8A71DF7
+
+2. VERIFICACIÓN DE INTEGRIDAD DEL SISTEMA:
+   Comando: python3 validadores/v_ley_adt_sentencia.py
+   Objetivo: Validar la sincronización NTP y la integridad del motor.
+
+3. VERIFICACIÓN DE PROPIEDAD (SELLO ADT):
+   Comando: grep -r "PROTOCOLO LEY ADT" .
+   Objetivo: Confirmar que todos los activos contienen el Sello Primordial JEGL.
+
+4. PROTOCOLO DE EMERGENCIA:
+   Si el sistema detecta manipulación, el módulo 'v_ley_adt_sentencia.py' 
+   ejecutará automáticamente la PURGA IRREVOCABLE de activos Pro/Elite.
+
+"La soberanía digital no se pide, se construye y se defiende."
+- JEGL
+================================================================

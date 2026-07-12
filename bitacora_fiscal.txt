@@ -1,0 +1,13 @@
+--- BITÁCORA FISCAL SOBERANA: PLAN DE LIQUIDACIÓN ---
+Servicio: Google_Workspace
+  - Pendiente original: $1273.57
+  - Pagado hasta hoy:   $0.00
+  - Saldo actual:       $1273.57
+
+Servicio: Cloudflare
+  - Pendiente original: $60.50
+  - Pagado hasta hoy:   $0.00
+  - Saldo actual:       $60.50
+
+TOTAL ADEUDADO A LIQUIDAR: $1334.07
+Estado: 100% REGISTRADO Y AUDITABLE

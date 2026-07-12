@@ -1,0 +1,30 @@
+name: "Compliance & License Audit"
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  audit-headers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify License Headers
+        run: |
+          errors=0
+          # Busca archivos fuente e inspecciona si contienen la firma JEGL
+          for file in $(find . -name "*.rs" -o -name "*.cpp" -o -name "*.py" -o -name "*.h"); do
+            if ! grep -q "José Emanuel Guadalupe López (JEGL)" "$file"; then
+              echo "ERR: Falta encabezado legal en $file"
+              errors=$((errors + 1))
+            fi
+          done
+          if [ $errors -gt 0 ]; then
+            echo "Error: Se encontraron $errors archivo(s) sin licenciamiento debido."
+            exit 1
+          fi
+          echo "100% de los archivos validados con éxito."

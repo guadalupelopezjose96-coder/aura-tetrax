@@ -1,0 +1,10 @@
+CONTRATO DE INTERCAMBIO DE SERVICIOS TECNOLÓGICOS Y ASISTENCIA DE IA
+ENTRE: El Desarrollador Titular de la Suite Aura ("El Proveedor")
+Y: El Socio Comercial / Institucional ("El Beneficiario")
+
+CLÁUSULAS FUNDAMENTALES AL 100%:
+
+1. OBJETO DEL ACUERDO: El Proveedor otorga un acceso exclusivo limitado por API a los endpoints del software Aura (en sus niveles Core, Pro o Elite según cuota) hospedados en Google Cloud Platform. 
+2. PROPIEDAD INTELECTUAL INALTERABLE: Este acuerdo NO transfiere derechos de autor, patentes, marcas o acceso al código fuente original (incluyendo archivos de control .py, binarios compilados .so o scripts criptográficos). El 100% de la propiedad intelectual permanece en manos del Proveedor de manera permanente e irrevocable.
+3. CONFIDENCIALIDAD DE DATOS (DATA PRIVACY): Los flujos de datos enviados a través del ecosistema de Vertex AI serán tratados bajo políticas empresariales privadas de Google Cloud, prohibiendo su uso para el entrenamiento de modelos públicos de terceros.
+4. CLAUSULA DE REVOCACIÓN TÉCNICA: El Proveedor retiene el derecho técnico y legal absoluto de rescindir los tokens de acceso, desautorizar las Cuentas de Servicio de GCP o apagar las pasarelas de comunicación de forma inmediata si se detecta un uso malicioso, intento de ingeniería inversa o incumplimiento de las contraprestaciones acordadas.

@@ -1,0 +1,12 @@
+target/
+*.bin
+*.out
+*.log
+# Ignorar cualquier archivo mayor a 50MB por si acaso
+core.*
+*.tmp
+*.so
+build/
+
+echo "*.so" >> .gitignore
+echo "build/" >> .gitignore

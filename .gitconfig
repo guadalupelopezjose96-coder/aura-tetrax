@@ -1,0 +1,35 @@
+[user]
+	name = guadalupelopezjose96-coder
+	email = guadalupelopesjose96@gmail.com
+	signingkey = 072E8779293C021FA16AC9CAB466838F40828C46
+[commit]
+	gpgsign = false
+[credential]
+	helper = store
+[http]
+	postBuffer = 524288000
+	lowSpeedLimit = 0
+	lowSpeedTime = 999999
+[core]
+	compression = 9
+[gpg]
+	format = openpgp
+	program = gpg
+[pack]
+	windowMemory = 50m
+	packSizeLimit = 50m
+	threads = 1
+[ssh]
+	postBuffer = 2147483648
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[advice]
+	defaultBranchName = false
+	addEmbeddedRepo = false
+[tag]
+	gpgsign = true

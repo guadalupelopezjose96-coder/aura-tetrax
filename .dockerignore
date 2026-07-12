@@ -1,0 +1,9 @@
+.git
+node_modules
+target
+build
+dist
+*.so
+*.pyc
+__pycache__
+.env

@@ -1,0 +1,23 @@
+[package]
+name = "bunker"
+version = "1.0.0"
+authors = ["JEGL-Elite"]
+edition = "2021"
+publish = false
+license = "MIT" # <--- Soluciona el error 'unlicensed'
+
+[dependencies]
+chrono = "0.4"
+colored = "2.1"
+anyhow = "1.0"
+
+[build-dependencies]
+cc = "1.0"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
+incremental = false

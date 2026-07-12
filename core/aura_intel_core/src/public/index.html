@@ -1,0 +1,39 @@
+/* * PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+ * PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+ * MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+ * ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+ */
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Aura Intel Elite 100%</title>
+    <style>
+        body { background: #0a0a0a; color: #00ffcc; font-family: 'Courier New', monospace; text-align: center; padding: 50px; }
+        .box { border: 2px solid #00ffcc; padding: 30px; border-radius: 15px; box-shadow: 0 0 30px #00ffcc; display: inline-block; }
+        .birthday-tag { color: gold; font-weight: bold; font-size: 1.2em; }
+        button { background: #00ffcc; color: #000; padding: 15px 30px; border: none; font-weight: bold; cursor: pointer; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>🛡️ AURA INTEL ELITE CORE</h1>
+        <p class="birthday-tag">🎁 EDICIÓN ESPECIAL: 40 ANIVERSARIO JOSÉ GUADALUPE LÓPEZ 🎁</p>
+        <hr>
+        <p>Seguridad Criptográfica Grado Militar al 100%</p>
+        <div style="font-size: 2em; margin: 20px;">0.10 ETH</div>
+        <button onclick="comprar100()">ADQUIRIR LICENCIA VIP</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+    <script>
+        async function comprar100() {
+            if (!window.ethereum) return alert("Instala MetaMask");
+            const provider = new ethers.BrowserProvider(window.ethereum);
+            const signer = await provider.getSigner();
+            const tx = await signer.sendTransaction({ to: "TU_WALLET_AQUI", value: ethers.parseEther("0.10") });
+            alert("✅ Pago enviado al 100%: " + tx.hash);
+        }
+    </script>
+</body>
+</html>

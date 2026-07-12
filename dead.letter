@@ -1,0 +1,8 @@
+From u0_a315@localhost Mon Jun 29 03:29:58 2026
+Subject: ALERTA DE SEGURIDAD JEGL 100%
+To: <gestor@auraintelcore.com>
+User-Agent: mail (GNU Mailutils 3.21)
+Date: Sun, 28 Jun 2026 23:29:58 -0400
+
+ALERTA: Acceso no autorizado o evento detectado en: logs_archive. Acción: ACCESS,ISDIR
+

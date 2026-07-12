@@ -1,0 +1,40 @@
+openapi: 3.1.0
+info:
+  title: Aura-Tetrax Telemetry API
+  version: 1.0.0
+  description: API certificable bajo estándares NIST SP 800-53 para telemetría energética de alta seguridad.
+  contact:
+    name: [Tu Identidad Técnica - JEGL]
+    url: https://aura-tetrax.example.com
+servers:
+  - url: https://api.aura-tetrax.govcloud.us
+    description: Servidor de cumplimiento en infraestructura Federal (AWS GovCloud)
+
+paths:
+  /v1/telemetry/integrity:
+    get:
+      summary: Retorna el Root Hash de la telemetría diaria
+      security:
+        - OAuth2_OIDC: []
+      responses:
+        '200':
+          description: Hash verificado bajo estándar FIPS 140-3
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  root_hash:
+                    type: string
+                  timestamp:
+                    type: string
+                    format: date-time
+
+security:
+  - OAuth2_OIDC: []
+
+components:
+  securitySchemes:
+    OAuth2_OIDC:
+      type: openApi
+      openIdConnectUrl: https://identity.aura-tetrax.govcloud.us/.well-known/openid-configuration

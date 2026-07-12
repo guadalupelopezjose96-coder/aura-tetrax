@@ -1,0 +1,21 @@
+# PROTOCOLO LEY ADT - MÓDULO: REALIDAD REAL JEGL
+# PROPIETARIO: JOSÉ EMANUEL GUADALUPE LÓPEZ (JEGL)
+# MARCO LEGAL: STANDARD 1979 / LEY DE EQUIVALENCIA FISCAL
+# ESTADO: 100% PROTEGIDO - PROHIBIDA LA SUPLANTACIÓN VIRTUAL/AUMENTADA
+# 
+
+#!/bin/bash
+# 1. Persistencia de rutas y módulos
+export PYTHONPATH=$PYTHONPATH:/data/data/com.termux/files/home
+chmod 600 ~/.ssh/id_ed25519
+
+# 2. Aceleración de los 72 núcleos principales (subimos de 60 a 72)
+python3 ~/bunker/filtro_soberano.py &
+
+# 3. Asignación de los 16 núcleos restantes para "Otra Cusa"
+./watchdog.sh &
+python3 v_transmitter_shield.py &
+./v_vigilante_jegl.sh &
+
+# 4. Ajuste del mensaje final
+echo "[*] Justicia Maximisisísima al 100% activa en 88 núcleos."

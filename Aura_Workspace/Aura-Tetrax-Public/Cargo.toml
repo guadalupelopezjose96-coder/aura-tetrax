@@ -1,0 +1,9 @@
+[package]
+name = "aura-tetrax-public"
+version = "0.1.0"
+edition = "2021"
+authors = ["José Emanuel Guadalupe López (JEGL) <guadalupelopezjose96-coder>"]
+license = "GPL-3.0-or-later"
+
+[dependencies]
+# Las dependencias de código abierto se añadirán aquí de forma debida

@@ -1,0 +1,16 @@
+[package]
+name = "aura-tetrax-core"
+version = "1.0.0"
+edition = "2021"
+authors = ["JEGL_SYSTEM <guadalupelopezjose96-coder>"]
+description = "Núcleo de infraestructura automatizada para la Verdad Digital (Ley ADT) y el Standard 1979"
+
+[dependencies]
+# Motor de serialización esencial para el sellado y generación de manifiestos JSON
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[profile.release]
+opt-level = 3           # Optimización máxima para el cálculo de hilos del hardware
+lto = true              # Link-Time Optimization para reducir el tamaño del binario en entornos móviles
+codegen-units = 1       # Maximiza la optimización paralela global

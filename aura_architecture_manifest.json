@@ -1,0 +1,10 @@
+{
+  "author": "guadalupelopezjose96-coder",
+  "min_cores": 76,
+  "max_cores": 88,
+  "frequencies": [
+    432.0,
+    528.0
+  ],
+  "tolerance": 0.00000000
+}

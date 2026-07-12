@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/JEGL_PROJECTS/Aura_Premium/dist/sonic_geometry_engine/target/release/sonic_geometry_engine: /data/data/com.termux/files/home/JEGL_PROJECTS/Aura_Premium/dist/sonic_geometry_engine/src/main.rs

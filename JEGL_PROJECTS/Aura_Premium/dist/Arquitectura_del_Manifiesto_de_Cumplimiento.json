@@ -1,0 +1,17 @@
+{
+  "manifest_version": "1.0.0",
+  "project_id": "Aura-Core-Basic",
+  "legal_framework": "Standard-1979",
+  "licensing": {
+    "clause_irrevocable": "Ley irrevocable: El 100% de todos los componentes Aura Core básicos son 100% de gratis.",
+    "access_type": "Universal_Public_Domain",
+    "monetization_allowed": false
+  },
+  "audit_rules": [
+    {
+      "rule_id": "RULE-001-FISCAL-EQUIVALENCE",
+      "description": "Validación de equivalencia fiscal y balance cero en transacciones de soberanía digital.",
+      "expression": "total_inputs == total_outputs"
+    }
+  ]
+}

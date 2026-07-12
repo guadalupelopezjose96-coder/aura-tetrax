@@ -1,0 +1,9 @@
+[
+    {
+        "timestamp": "2026-05-03T...",
+        "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": { "status": "Sincronización Exitosa", ... },
+        "law_standard": "Estándar 1979 - Equivalencia Fiscal",
+        "current_hash": "a1b2c3d4..."
+    }
+]

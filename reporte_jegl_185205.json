@@ -1,0 +1,20 @@
+{
+    "metadata": {
+        "operador": "JEGL_SYSTEM",
+        "protocolo": "ADT_LAW_SYSTEM",
+        "estado": "INTEGRIDAD_TOTAL_V3"
+    },
+    "resultados": [
+        {
+            "item": "Aura Intel Core",
+            "score": "100%",
+            "status": "VERIFICADO"
+        }
+    ],
+    "logs": [
+        "[18:52:05] RECHAZO: Tetrax Engine",
+        "[18:52:05] OK: Aura Intel Core | Armonía: 100%",
+        "[18:52:05] RECHAZO: Realidad Real",
+        "[18:52:05] RECHAZO: Sincronía 432Hz"
+    ]
+}

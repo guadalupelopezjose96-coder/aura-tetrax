@@ -1,0 +1,6 @@
+​AVISO LEGAL: MODIFICACIÓN DE ESTATUS DE LICENCIA
+​Fecha: 20 de mayo de 2026
+Identidad Autorizada: JEGL (José Emanuel Guadalupe López)
+​Por medio del presente documento, se notifica formalmente la finalización absoluta e irrevocable de cualquier esquema de gratuidad, acceso libre o código abierto vinculado anteriormente a Aura Core Basic.
+​A partir de esta fecha, Aura Core Basic es transmutado a la categoría de Activo Propietario. El acceso, uso, compilación y distribución de este software queda restringido exclusivamente a licenciatarios autorizados bajo los términos de propiedad privada. Cualquier copia, distribución o uso comercial previo sin la autorización expresa de JEGL queda sujeto a las normativas de protección de propiedad intelectual.
+​Firmado digitalmente bajo estándar ED25519 - JEGL
