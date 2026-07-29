@@ -1,0 +1,54 @@
+================================================================================
+          MANIFIESTO FUNDACIONAL DE LA MATRIZ MAESTRA AL 100%
+================================================================================
+FECHA DE CONSOLIDACION: 18 DE JULIO DE 2026
+JURISDICCION PRINCIPAL: ESTADO DE FLORIDA, ESTADOS UNIDOS DE AMERICA
+ESTADO DEL DOCUMENTO: 100% LICITO, DEBIDO Y DEFINITIVO
+
+I. DECLARACION DE SOBERANIA Y PROPIEDAD INTELECTUAL
+El 100% del codigo fuente (incluyendo los ecosistemas Veg-digital, Bio-digital, 
+Quimica-digital, Propulsion-digital y HexaPhonix), los diseños de hardware, 
+los contratos inteligentes y los algoritmos procesados en los 8 nucleos logicos, 
+son propiedad exclusiva e irrevocable del Fideicomiso. Queda estrictamente 
+prohibida la ingenieria inversa, copia, distribucion o alteracion no autorizada.
+
+II. CLAUSULA DE EXENCION MEDICA Y SALUD (DESCARGO ABSOLUTO)
+Se declara al 100% y de forma irrefutable que los ecosistemas de Ingenieria 
+Sensorica e Ingenieria Sensorial regulados por esta Matriz NO SON DISPOSITIVOS 
+MEDICOS. 
+1. Esta tecnologia no diagnostica, no trata, no mitiga, no cura y no previene 
+   ninguna enfermedad, condicion biologica o patologia.
+2. El uso de frecuencias acusticas (Sonido 4D), estimulacion luminica (Geometria 
+   del Sonido) y actuadores hapticos es 100% bajo el propio riesgo del usuario.
+3. El Fideicomiso y el autor quedan 100% eximidos de responsabilidad penal y 
+   civil por daños derivados de fatiga auditiva, fotosensibilidad, epilepsia 
+   o cualquier lesion fisica.
+
+III. PROTOCOLO DE PRIVACIDAD Y CAPTURA SENSORICA (CUMPLIMIENTO GDPR/HIPAA/BIPA)
+Todo dato fisico, telemetrico o biometrico capturado del mundo real mediante 
+sensores estara sujeto a:
+1. Consentimiento explicito (Opt-in) obligatorio por parte del usuario.
+2. Encriptacion militar automatica bajo el estandar AES-256.
+3. Anonimizacion total de la telemetria antes de ser introducida a la Matriz.
+
+IV. LEYES DE EMISION Y TOLERANCIA A FALLOS (CUMPLIMIENTO OSHA/FCC/FDA)
+La Matriz exige que todo hardware vinculado al ecosistema opere con:
+1. Limitadores fisicos acusticos que impidan la emision continua por encima 
+   de 85 dB (Proteccion auditiva al 100%).
+2. Protocolo "Fail-Safe" de apagado de emergencia en caso de sobrecalentamiento 
+   o anomalia en la red.
+3. Prohibicion absoluta (AUP) del uso del hardware o software para fines de 
+   armamento, acoso, espionaje o daño intencional.
+
+V. PROTOCOLO CRIPTOGRAFICO FINANCIERO Y DE INMUTABILIDAD
+1. El contrato inteligente "RestauradorJusticiaMax.sol" regira al 100% la 
+   distribucion licita de regalias generadas por la Matriz, auditado y anclado 
+   en la blockchain.
+2. La integridad del ecosistema se verifica mediante firmas criptograficas 
+   SHA-256. Cualquier alteracion de un byte en los registros (logs) anulara 
+   la operacion por seguridad.
+
+================================================================================
+AL EJECUTAR EL CODIGO INDEX.JS O ENCENDER EL HARDWARE SENSORIAL, EL USUARIO 
+ACEPTA EL 100% DE ESTAS CONDICIONES DE MANERA VINCULANTE, LEGAL Y DEFINITIVA.
+================================================================================

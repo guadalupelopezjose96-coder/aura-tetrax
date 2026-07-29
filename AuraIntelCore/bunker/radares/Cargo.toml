@@ -1,0 +1,10 @@
+[package]
+name = "radar_sensorico_jegl"
+version = "1.0.0"
+authors = ["guadalupelopezjose96-coder <JEGL>"]
+edition = "2018"
+description = "Módulo de radar 100% Propiedad Privada para captura manual de frecuencias."
+
+[dependencies]
+sha2 = "0.10"
+chrono = "0.4"
