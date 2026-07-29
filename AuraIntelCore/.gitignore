@@ -1,0 +1,11 @@
+**/target/
+**/npm/
+**/.npm/
+**/node_modules/
+*.rlib
+*.rmeta
+*.gz
+*.wav
+*.png
+*.txt.gpg
+signature.sha256
