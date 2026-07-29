@@ -1,0 +1,23 @@
+name: SBOM y Compilacion
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-secure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del Repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Compilar Proyecto en Release
+        run: cargo build --release
+
+      - name: Generar Firma SHA256 de Binarios (Filtrado de Directorios)
+        run: |
+          find target/release -maxdepth 1 -type f -exec sha256sum {} + > signature.sha256
+          cat signature.sha256
