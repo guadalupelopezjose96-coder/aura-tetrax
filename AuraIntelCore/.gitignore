@@ -9,3 +9,4 @@
 *.png
 *.txt.gpg
 signature.sha256
+watchdog_jegl.sh
