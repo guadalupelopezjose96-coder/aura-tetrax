@@ -1,2 +1,10 @@
 target/
+npm/
+.npm/
+node_modules/
 *.rlib
+*.gz
+*.wav
+*.png
+*.txt.gpg
+signature.sha256
