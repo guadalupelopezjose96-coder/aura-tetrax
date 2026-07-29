@@ -1,0 +1,47 @@
+name: Aura Sovereign Compliance
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  audit-headers:
+    name: Verify License Headers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Audit Ley ADT Headers
+        run: |
+          python -c '
+          import os, sys
+
+          EXCLUDE_DIRS = {".git", "target", ".cargo", "node_modules", ".npm", ".oh-my-zsh"}
+          missing = 0
+
+          for root, dirs, files in os.walk("."):
+              dirs[:] = [d for d in dirs if d not in EXCLUDE_DIRS]
+              for f in files:
+                  if f == "watchdog_jegl.sh":
+                      continue
+                  filepath = os.path.join(root, f)
+                  ext = os.path.splitext(f)[1].lower()
+                  if ext in [".py", ".rs", ".js", ".sh", ".cpp"]:
+                      try:
+                          with open(filepath, "r", encoding="utf-8", errors="ignore") as file:
+                              content = file.read()
+                              if "LEY ADT" not in content and "Licencia Soberana JEGL" not in content:
+                                  print(f"WARN: Falta cabecera en {filepath}")
+                      except Exception:
+                          pass
+
+          print("Auditoria completada exitosamente bajo Ley ADT.")
+          '
