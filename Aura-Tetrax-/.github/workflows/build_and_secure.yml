@@ -17,7 +17,7 @@ jobs:
       - name: Compilar Proyecto en Release
         run: cargo build --release
 
-      - name: Generar Firma SHA256 con Filtro
+      - name: Generar Firma SHA256 con Filtro Absoluto
         run: |
           find target/release -maxdepth 1 -type f -exec sha256sum {} + > signature.sha256
           cat signature.sha256
