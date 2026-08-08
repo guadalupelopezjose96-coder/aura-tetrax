@@ -50,7 +50,7 @@ fn cargar_manifiesto_arquitectura() -> AuraArchitectureManifest {
             }
         }
     }
-    
+
     // Detección dinámica de núcleos para el respaldo 100% robusto
     let cores_actuales = num_cpus::get();
     let configuracion_respaldo = format!(
@@ -63,7 +63,7 @@ fn cargar_manifiesto_arquitectura() -> AuraArchitectureManifest {
         }}"#,
         cores_actuales, cores_actuales
     );
-    
+
     serde_json::from_str(&configuracion_respaldo).unwrap()
 }
 
@@ -104,9 +104,9 @@ mod tests {
     fn test_100_por_cientuv_carga_manifiestuv_al_100() {
         let manifiesto = cargar_manifiesto_arquitectura();
         assert_eq!(manifiesto.author, "guadalupelopezjose96-coder");
-        
+
         let cores_actuales = num_cpus::get();
-        
+
         // Validación adaptativa según el entorno (CI vs Local)
         if env::var("CI").is_ok() {
             assert!(
