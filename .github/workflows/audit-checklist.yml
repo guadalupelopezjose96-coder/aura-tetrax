@@ -1,0 +1,85 @@
+name: Pre-Production Audit Checklist
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  audit:
+    name: Pre-Production Security & Quality Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      # ------------------------------------------------------------------
+      # 1. Obtener código fuente
+      # ------------------------------------------------------------------
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ------------------------------------------------------------------
+      # 2. Paso 2 Checklist: Detección de Secretos Expuestos (Hardcoded Secrets)
+      # ------------------------------------------------------------------
+      - name: Secret Scanning (Trufflehog)
+        uses: trufflesecurity/trufflehog-action@main
+        with:
+          extra_args: --debug --only-verified
+
+      # ------------------------------------------------------------------
+      # 3. Configuración del entorno de ejecución (Ejemplo: Node.js)
+      # ------------------------------------------------------------------
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      # ------------------------------------------------------------------
+      # 4. Paso 3 Checklist: Linter y Verificación de Tipado Estricto
+      # ------------------------------------------------------------------
+      - name: Run Linter & Static Analysis
+        run: npm run lint
+
+      - name: Check Strict Types
+        run: npm run type-check --if-present
+
+      # ------------------------------------------------------------------
+      # 5. Paso 4 Checklist: Pruebas Unitarias y Cobertura (Mínimo 80%)
+      # ------------------------------------------------------------------
+      - name: Run Unit Tests & Coverage
+        run: npm run test:coverage
+
+      # ------------------------------------------------------------------
+      # 6. Paso 2 Checklist: Análisis Estático de Seguridad (SAST)
+      # ------------------------------------------------------------------
+      - name: SAST Code Scanning (CodeQL)
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript # Ajustar al lenguaje de tu proyecto
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+
+      # ------------------------------------------------------------------
+      # 7. Paso 1 Checklist: Auditoría de Vulnerabilidades y Licencias (SBOM)
+      # ------------------------------------------------------------------
+      - name: Dependency Vulnerability Audit
+        run: npm audit --audit-level=high
+
+      - name: Generate SBOM (Software Bill of Materials)
+        uses: Anchore/sbom-action@v0
+        with:
+          format: spdx-json
+          output-file: "sbom.spdx.json"
+
+      - name: Upload SBOM Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-artifact
+          path: sbom.spdx.json

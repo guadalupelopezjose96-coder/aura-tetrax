@@ -1,0 +1,70 @@
+name: Python Pre-Production Security & Quality Audit
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  audit:
+    name: Python Security & Quality Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Obtener el código fuente
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. Paso 2 Checklist: Detección de Secretos Expuestos
+      - name: Secret Scanning (Trufflehog)
+        uses: trufflesecurity/trufflehog-action@main
+        with:
+          extra_args: --debug --only-verified
+
+      # 3. Configuración del entorno Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies & Tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff mypy pytest pytest-cov bandit pip-audit
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # 4. Paso 3 Checklist: Linter y Verificación de Tipado Estricto
+      - name: Run Linter (Ruff)
+        run: ruff check .
+
+      - name: Check Strict Types (Mypy)
+        run: mypy . --strict
+
+      # 5. Paso 4 Checklist: Pruebas Unitarias y Cobertura
+      - name: Run Unit Tests & Coverage (Pytest)
+        run: pytest --cov=. --cov-report=xml --cov-report=term
+
+      # 6. Paso 2 Checklist: Análisis Estático de Seguridad (Bandit)
+      - name: Security Code Scan (Bandit)
+        run: bandit -r . -lll
+
+      # 7. Paso 1 Checklist: Vulnerabilidades de Dependencias (pip-audit)
+      - name: Dependency Vulnerability Audit
+        run: pip-audit
+
+      # 8. Paso 1 Checklist: Generación de SBOM (Syft)
+      - name: Generate SBOM (Syft)
+        uses: anchore/sbom-action@v0
+        with:
+          format: spdx-json
+          output-file: "sbom.spdx.json"
+
+      - name: Upload SBOM Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-sbom-artifact
+          path: sbom.spdx.json

@@ -1,0 +1,80 @@
+# .gitlab-ci.yml
+
+stages:
+  - secrets-scan
+  - quality-and-types
+  - test-and-coverage
+  - security-sast
+  - dependencies-and-sbom
+
+variables:
+  NODE_VERSION: "20"
+
+default:
+  image: node:$NODE_VERSION
+  before_script:
+    - npm ci
+
+# ------------------------------------------------------------------
+# 1. Paso 2 Checklist: Detección de Secretos Expuestos (Trufflehog)
+# ------------------------------------------------------------------
+trufflehog-secrets-scan:
+  stage: secrets-scan
+  image:
+    name: trufflesecurity/trufflehog:latest
+    entrypoint: [""]
+  before_script: [] # Omite el npm ci para el escaneo de secretos
+  script:
+    - trufflehog git file://. --only-verified
+
+# ------------------------------------------------------------------
+# 2. Paso 3 Checklist: Linter y Verificación de Tipado Estricto
+# ------------------------------------------------------------------
+lint-and-types:
+  stage: quality-and-types
+  script:
+    - npm run lint
+    - npm run type-check --if-present
+
+# ------------------------------------------------------------------
+# 3. Paso 4 Checklist: Pruebas Unitarias y Cobertura (Mínimo 80%)
+# ------------------------------------------------------------------
+unit-tests-coverage:
+  stage: test-and-coverage
+  script:
+    - npm run test:coverage
+  coverage: '/All files\s*\|\s*([\d\.]+)/'
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/cobertura-coverage.xml
+
+# ------------------------------------------------------------------
+# 4. Paso 2 Checklist: Análisis Estático de Seguridad (SAST)
+# ------------------------------------------------------------------
+include:
+  - template: Security/SAST.gitlab-ci.yml
+
+sast:
+  stage: security-sast
+
+# ------------------------------------------------------------------
+# 5. Paso 1 Checklist: Vulnerabilidades de Dependencias y SBOM
+# ------------------------------------------------------------------
+dependency-audit:
+  stage: dependencies-and-sbom
+  script:
+    - npm audit --audit-level=high
+
+sbom-generation:
+  stage: dependencies-and-sbom
+  before_script:
+    - curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+  script:
+    - syft dir:. -o spdx-json=sbom.spdx.json
+  artifacts:
+    name: "sbom-$CI_COMMIT_REF_NAME"
+    paths:
+      - sbom.spdx.json
+    expire_in: 30 days
