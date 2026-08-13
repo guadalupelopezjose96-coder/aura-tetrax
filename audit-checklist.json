@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Checklist de Auditoría de Calidad y Seguridad Pré-Producción",
+  "version": "1.0.0",
+  "metadata": {
+    "target": "Software Utilities and Microservices",
+    "compliance_standards": ["GDPR", "CCPA", "OWASP", "ISO-27001"]
+  },
+  "sections": [
+    {
+      "id": "SEC-01",
+      "category": "Cumplimiento Legal, Licencias y Privacidad",
+      "items": [
+        {
+          "id": "LEG-01",
+          "title": "Inventario de Dependencias (SBOM)",
+          "description": "Se ha generado la lista de componentes (Software Bill of Materials) en formato SPDX/CycloneDX y ninguna librería utiliza licencias incompatibles o restrictivas.",
+          "severity": "high",
+          "automated": true,
+          "status": "pending"
+        },
+        {
+          "id": "LEG-02",
+          "title": "Minimización de Datos (RGPD/CCPA)",
+          "description": "La utilidad solo solicita, procesa y almacena los datos estrictamente necesarios para cumplir su función.",
+          "severity": "critical",
+          "automated": false,
+          "status": "pending"
+        },
+        {
+          "id": "LEG-03",
+          "title": "Tratamiento de Datos Sensibles (PII)",
+          "description": "Los datos personales identificables se anonimizan o cifran en tránsito (TLS 1.3) y en reposo (AES-256).",
+          "severity": "critical",
+          "automated": false,
+          "status": "pending"
+        },
+        {
+          "id": "LEG-04",
+          "title": "Trazabilidad y Retención de Logs",
+          "description": "La retención de registros de actividad cumple con las leyes aplicables sin almacenar información confidencial ni credenciales.",
+          "severity": "medium",
+          "automated": true,
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "SEC-02",
+      "category": "Seguridad y Manejo de Credenciales",
+      "items": [
+        {
+          "id": "SEC-01-ITEM",
+          "title": "Zero Hardcoded Secrets",
+          "description": "No existen contraseñas, tokens de API ni claves privadas escritas directamente en el código base o historial de commits.",
+          "severity": "critical",
+          "automated": true,
+          "status": "pending"
+        },
+        {
+          "id": "SEC-02-ITEM",
+          "title": "Gestión Centralizada de Secretos",
+          "description": "La configuración sensible se inyecta exclusivamente mediante variables de entorno o gestores dedicados.",
+          "severity": "high",
+          "automated": true,
+          "status": "pending"
+        },
+        {
+          "id": "SEC-03-ITEM",
+          "title": "Validación y Sanitización de Entradas",
+          "description": "Todos los datos recibidos se validan con esquemas strictly definidos para prevenir inyecciones.",
+          "severity": "critical",
+          "automated": true,
+          "status": "pending"
+        },
+        {
+          "id": "SEC-04-ITEM",
+          "title": "Análisis Estático SAST sin Vulnerabilidades",
+          "description": "Ejecución de escaneo de código sin hallazgos de severidad Crítica o Alta.",
+          "severity": "high",
+          "automated": true,
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "SEC-03",
+      "category": "Arquitectura, Calidad de Código y Errores",
+      "items": [
+        {
+          "id": "ARCH-01",
+          "title": "Principio de Responsabilidad Única (SRP)",
+          "description": "La utilidad cumple una sola función atómica y desacoplada de dependencias globales.",
+          "severity": "medium",
+          "automated": true,
+          "status": "pending"
+        },
+        {
+          "id": "ARCH-02",
+          "title": "Tipado Estricto",
+          "description": "Las interfaces de entrada y salida utilizan tipos explícitos o validadores.",
+          "severity": "high",
+          "automated": true,
+          "status": "pending"
+        },
+        {
+          "id": "ARCH-03",
+          "title": "Manejo Estructurado de Excepciones",
+          "description": "Los fallos se capturan de forma segura sin revelar trazas internas al cliente final.",
+          "severity": "high",
+          "automated": true,
+          "status": "pending"
+        },
+        {
+          "id": "ARCH-04",
+          "title": "Logging Estructurado en JSON",
+          "description": "Los eventos del sistema se emiten en formato JSON diferenciando los niveles.",
+          "severity": "medium",
+          "automated": true,
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "SEC-04",
+      "category": "Pruebas, Mantenimiento y Documentación",
+      "items": [
+        {
+          "id": "TEST-01",
+          "title": "Cobertura de Pruebas Unitarias >= 80%",
+          "description": "El reporte de cobertura de código alcanza o supera el umbral del 80%.",
+          "severity": "high",
+          "automated": true,
+          "status": "pending"
+        },
+        {
+          "id": "TEST-02",
+          "title": "Validación de Casos Borde (Edge Cases)",
+          "description": "Se ha comprobado el comportamiento ante valores nulos, vacíos o entradas inesperadas.",
+          "severity": "high",
+          "automated": true,
+          "status": "pending"
+        },
+        {
+          "id": "DOC-01",
+          "title": "Versionado Semántico (SemVer)",
+          "description": "El proyecto define explícitamente su versión bajo la nomenclatura MAJOR.MINOR.PATCH.",
+          "severity": "medium",
+          "automated": false,
+          "status": "pending"
+        },
+        {
+          "id": "DOC-02",
+          "title": "Documentación Explicita (README / API)",
+          "description": "Existe un archivo README con instrucciones de instalación y contratos de API.",
+          "severity": "medium",
+          "automated": false,
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
