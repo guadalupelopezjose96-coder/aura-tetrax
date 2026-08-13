@@ -24,7 +24,7 @@ jobs:
       # 2. Paso 2 Checklist: Detección de Secretos Expuestos (Hardcoded Secrets)
       # ------------------------------------------------------------------
       - name: Secret Scanning (Trufflehog)
-        uses: trufflesecurity/trufflehog-action@main
+        uses: trufflesecurity/trufflehog@main
         with:
           extra_args: --debug --only-verified
 
