@@ -1,18 +1,29 @@
+name: "Aura-Tetrax Sovereign Compliance & SHA-256 Seal"
+
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - master
-      - main
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
-  build-and-test:
+  legal-and-crypto-audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - name: Checkout del repositorio
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Configurar entorno Rust
-        uses: dtolnay/rust-toolchain@stable
+      - name: Verify Statutory Trade Secret Files (Fla. Stat. 812.081 & FOIA Ex. 4)
+        run: |
+          test -f LICENSE
+          test -f README.md
+          test -f ACUERDO_INTERCAMBIO.md
+          test -f ACUERDO_INTERCAMBIO.md.asc
 
-      - name: Compilar y verificar
-        run: cargo check --all-targets
+      - name: Generate Official SHA-256 Cryptographic Manifest
+        run: |
+          sha256sum LICENSE README.md ACUERDO_INTERCAMBIO.md ACUERDO_INTERCAMBIO.md.asc > GITHUB_SHA256_SEAL.txt
+          cat GITHUB_SHA256_SEAL.txt

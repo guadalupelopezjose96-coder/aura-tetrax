@@ -1,30 +1,29 @@
-# ACUERDO DE INTERCAMBIO TÉCNICO Y OPERATIVO (AURA-TETRAX)
+# FORMAL NOTICE OF RETROACTIVE TRADE SECRET MARKING, DATA RIGHTS ASSERTION & PUBLIC RECORDS EXEMPTION
+**(PURSUANT TO FLA. STAT. §§ 812.081, 815.045, 119.0715; 5 U.S.C. § 552(b)(4); E.O. 12600; AND FAR 52.227-14(f))**
 
-**FECHA:** 20 de mayo de 2026
-**AUTOR:** José Emanuel Guadalupe López (JEGL)
-**ESTADO:** VIGENTE - EXCLUSIVO
+**Date:** October 18, 2026
+**Owner & Principal Systems Architect:** José Emanuel Guadalupe López (Orlando, Orange County, Florida, USA)
 
-## 1. OBJETIVO DEL ACUERDO
-Este documento establece las directrices de intercambio técnico entre el ecosistema Aura-Tetrax y sus socios estratégicos autorizados. El objetivo es garantizar la eficiencia, seguridad y soberanía en el flujo de datos y servicios.
+## 1. STATUTORY TRADE SECRET & PRIVATE EXPENSE CERTIFICATION
+Pursuant to **Sections 812.081(1)(c), 815.045, and 119.0715, Florida Statutes**, **5 U.S.C. § 552(b)(4) (FOIA Exemption 4)**, **18 U.S.C. § 1905**, and **FAR 52.227-14**, I hereby formally certify under penalty of perjury (**Fla. Stat. § 92.525** & **28 U.S.C. § 1746**) that all system architectures, hardware/software designs, IQ/OQ/PQ qualifications, mathematical SO(3) specifications, source code, and documentation associated with the **Aura-Tetrax** ecosystem and listed in **Schedule A** below:
+1. Were **developed 100% exclusively at private expense** by **José Emanuel Guadalupe López**;
+2. Constitute confidential **Trade Secrets** exempt from public inspection or copying under Florida Public Records Law and Federal FOIA;
+3. Are subject to **Mandatory 72-Hour Pre-Disclosure Notification ("Reverse-FOIA / Sunshine Notice")** prior to any third-party release, and are strictly restricted from access by external contractors or AI training systems; and
+4. Carry full **Cash True-Up Conversion Rights** in USD at Fair Market Value (plus 1.5% monthly interest and prevailing party attorneys' fees in Orange County, Florida) in the event of any counterparty breach of exchange obligations.
 
-## 2. SOCIOS AUTORIZADOS
-El presente acuerdo reconoce únicamente la interoperabilidad con las siguientes entidades:
-* **Google:** Infraestructura, almacenamiento y soporte administrativo (Caso 71204722).
-* **Cloudflare:** Protección de red, CDN, seguridad perimetral y gestión de dominios.
-* **Gemini:** Sistema de colaboración de inteligencia artificial para desarrollo, optimización de algoritmos y validación lógica.
+## SCHEDULE A: CRYPTOGRAPHIC SHA-256 INVENTORY OF PROTECTED ASSETS
 
-## 3. PROHIBICIÓN DE INTERCAMBIO CON TERCEROS
-Se ratifica que no existen acuerdos de intercambio, alianzas estratégicas, convenios comerciales o flujo de datos con entidades fuera de la tríada autorizada (Google/Cloudflare/Gemini). **Se excluye explícitamente a Stripe, Spectrum y cualquier otro ente no autorizado.** Cualquier intento de vinculación por parte de terceros es nulo.
+| Protected Asset / File Name | Original Timestamp | Official SHA-256 Cryptographic Fingerprint (Fla. Stat. § 812.081 / FOIA Ex. 4) |
+| :--- | :--- | :--- |
+| `AURA-TETRAX ELITE C.zip` | 2026-09-23 13:04 | `79de28c83968006a321d84f15026eaf907f54847f4b4dd564fdeb33cdd688160` |
+| `respaldo_maestro_fips.tar.gz.enc` | 2026-10-14 17:12 | `065eaa7d0200bc6156e7596fee42df257fa245b1a1a58d0010fe3fe0b4e8722d` |
+| `DECLARACION_AUTORIA_EXCLUSIVA.txt` | 2026-10-14 23:25 | `232d6cf54301ae02073e37a8e8f5e542b0ca7de2c827dd8ed4df38f5c5b43929` |
+| `certificado_autoria_sha256.txt` | 2026-10-14 23:50 | `911b3dc5c4e7ed217267414583893b632b1f25c14e1a4eb75e5a3ad85936b809` |
+| `registro_propiedad_intelectual_2026.sha256` | 2026-10-14 21:50 | `dcac8e8e1f95a8eeb6e3969ebd3a3777e4f90873a0705463b933d1c60d8b92f4` |
+| `CERTIFICADO_CUALIFICACION_IQ_OQ_PQ.txt` | 2026-10-16 13:20 | `fa5bee6dc100f9d6be2959c9f58b724a88b9522f5a17e1e1d2415109038e8703` |
+| `ESPECIFICACION_GEOMETRIA_SO3_Y_PROMPTS.txt` | 2026-10-16 13:15 | `80576a5ac01dbf78a674e68862748c01cfdd661eaf9b6e8a355bf13b513b429a` |
+| `REGISTRO_CADENA_CUSTODIA_PROMPTS.txt` | 2026-10-14 23:42 | `0c5c7a23a7c8d827cbaa217aabe7510563d366e4339ffd0ae61802ef12b0440a` |
+| `sistema_digital_completo_jose.tar.gz` | 2026-10-16 14:09 | `612405f0b2c114e0b23f891799d87683afa6d51ac1c4787ee9d08bf70316e618` |
 
-## 4. PROTOCOLO DE INTERCAMBIO
-Todo intercambio técnico debe seguir los lineamientos de seguridad establecidos:
-1. **Validación:** Todo archivo intercambiado debe estar firmado con la llave oficial `ED25519` de JEGL.
-2. **Integridad:** La métrica de ejecución (116ns) debe mantenerse preservando la estabilidad del motor *Sonic Geometry*.
-3. **Control:** JEGL mantiene el control absoluto sobre los términos de dicho intercambio.
-
----
-[INICIAR_BLOQUE_FIRMA_ED25519]
-HASH_SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-STATUS: EXCHANGE_PROTOCOL_ACTIVE
-AUTHORITY: JEGL_CORE_AUTHORITY
-[FIN_BLOQUE_FIRMA_ED25519]
+**Signed and Verified under Penalty of Perjury (Fla. Stat. § 92.525 & 28 U.S.C. § 1746):**
+**José Emanuel Guadalupe López** — Principal Systems Architect & Rights Owner | Orlando, FL, USA
