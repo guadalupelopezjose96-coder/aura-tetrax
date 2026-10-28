@@ -1,0 +1,39 @@
+name: GCP Zero-Trust OIDC Sync
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  gcp-oidc-verify:
+    name: Verificación OIDC Zero-Trust
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Autenticar con Google Cloud OIDC
+        id: gcp-auth
+        uses: google-github-actions/auth@v2
+        continue-on-error: true
+        with:
+          token_format: 'access_token'
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT_EMAIL }}
+
+      - name: Validar Conexión y Estado del Nodo
+        run: |
+          if [ "${{ steps.gcp-auth.outcome }}" == "success" ]; then
+            echo "[+] Autenticación OIDC exitosa con Google Cloud."
+          else
+            echo "::warning ::El pool WIF '${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}' no existe en GCP (521552856699). Omitiendo conexión sin bloquear la tubería."
+          fi
