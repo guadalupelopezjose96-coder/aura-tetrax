@@ -20,3 +20,8 @@ cache/
 .gnupg/
 .zcompdump*
 trabajo_rust/ubuntu/rootfs/
+
+**/target/
+target/
+.cache/
+**/.cache/

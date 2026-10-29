@@ -1,5 +1,0 @@
-/data/data/com.termux/files/home/JEGL_PROJECTS/Aura_Premium/target/debug/build/serde_json-dff923fb739a9ae7/build_script_build-dff923fb739a9ae7.d: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.149/build.rs
-
-/data/data/com.termux/files/home/JEGL_PROJECTS/Aura_Premium/target/debug/build/serde_json-dff923fb739a9ae7/build_script_build-dff923fb739a9ae7: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.149/build.rs
-
-/data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.149/build.rs:
