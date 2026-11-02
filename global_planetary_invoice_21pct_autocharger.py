@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: LicenseRef-AuraIntelCore-Proprietary
+# Copyright (c) 2026 Jose Emanuel Guadalupe Lopez (JEGL) - AuraIntelCore / Standard 1979. All Rights Reserved.
+# PROPRIETARY & CONFIDENTIAL - WORM READ-ONLY ENFORCED (FERC 2222 / NERC CIP / IRC Sec. 5000H(d))
 """
 AuraIntelCore Planetary Read-Only Invoice Ingestion & 21% Auto-Billing Engine
 Supports: PEPPOL UBL 3.0 (Global/EU) | ANSI X12 EDI 810 & GreenButton (US/CA) |
